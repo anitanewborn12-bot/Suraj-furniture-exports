@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Suraj Furniture Exports is a furniture manufacturing partner for wholesale buyers, retailers, importers and international businesses. Explore our furniture collections and request a quotation.">
+<title>Suraj Furniture Exports | Furniture Manufacturing & B2B Supply</title>
+<style>
+:root{--ink:#20221e;--muted:#6b6c63;--cream:#f5f1e9;--paper:#fffdf8;--olive:#58614b;--gold:#b18a55;--line:#e3ddd1}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}a{color:inherit;text-decoration:none}.wrap{width:min(1180px,92%);margin:auto}
+.topbar{background:var(--ink);color:#f8f4ec;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:9px 0}.topbar .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:10;background:rgba(255,253,248,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}.nav{display:flex;align-items:center;justify-content:space-between;min-height:82px;gap:24px}.brand{font-family:Georgia,serif;font-size:22px;letter-spacing:.04em;line-height:1.1}.brand small{display:block;font:10px Arial,sans-serif;letter-spacing:.25em;color:var(--muted);margin-top:7px}.navlinks{display:flex;gap:26px;align-items:center;font-size:13px;color:#3d4038}.navlinks a:hover{color:var(--gold)}.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--olive);color:white;padding:13px 20px;border:1px solid var(--olive);font-size:12px;font-weight:bold;letter-spacing:.1em;text-transform:uppercase;transition:.2s;cursor:pointer}.btn:hover{background:#3f4837}.btn.outline{background:transparent;color:var(--ink);border-color:#a9a493}.btn.outline:hover{background:var(--ink);color:white}.menu{display:none;background:none;border:0;font-size:25px}
+.hero{min-height:600px;display:grid;grid-template-columns:1fr 1fr;background:var(--cream)}.hero-copy{padding:90px max(5vw,calc((100vw - 1180px)/2)) 80px max(4vw,calc((100vw - 1180px)/2));display:flex;flex-direction:column;justify-content:center;align-items:flex-start}.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--olive);font-weight:bold}.hero h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(42px,5vw,68px);line-height:1.04;font-weight:normal;letter-spacing:-.035em;margin:22px 0}.hero p{max-width:470px;color:#5c5e55;font-size:16px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.hero-image{min-height:500px;background:linear-gradient(0deg,rgba(20,23,19,.12),rgba(20,23,19,.02)),url('https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1500&q=85') center/cover no-repeat}
+.trust{border-bottom:1px solid var(--line);background:var(--paper)}.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:22px 0;gap:18px}.trust-item{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#55584e;text-align:center;border-right:1px solid var(--line)}.trust-item:last-child{border:0}
+section{padding:90px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:35px}.section-head h2,.about h2,.cta h2{font:normal clamp(32px,4vw,48px)/1.1 Georgia,serif;letter-spacing:-.025em;margin:10px 0}.section-head p{max-width:450px;color:var(--muted);margin:0}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.product{background:#f2eee6}.product-img{height:290px;background-size:cover;background-position:center}.product:nth-child(1) .product-img{background-image:url('https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=900&q=80')}.product:nth-child(2) .product-img{background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80')}.product:nth-child(3) .product-img{background-image:url('https://images.unsplash.com/photo-1499933374294-4584851497cc?auto=format&fit=crop&w=900&q=80')}.product-info{padding:20px 22px 24px}.product-info h3{font:normal 25px Georgia,serif;margin:0 0 7px}.product-info p{font-size:13px;color:var(--muted);margin:0 0 14px}.text-link{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:bold;border-bottom:1px solid var(--gold);padding-bottom:4px}
+.about{background:#e9e5da}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.about-photo{min-height:480px;background:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85') center/cover}.about p{color:#5d5f56}.features{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}.feature{border-top:1px solid #c9c3b6;padding-top:13px}.feature strong{display:block;font:normal 19px Georgia,serif;margin-bottom:4px}.feature span{font-size:12px;color:var(--muted)}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:35px}.process{border-top:1px solid var(--gold);padding-top:18px}.number{font:normal 28px Georgia,serif;color:var(--gold)}.process h3{font:normal 21px Georgia,serif;margin:12px 0 8px}.process p{font-size:13px;color:var(--muted);margin:0}
+.cta{background:var(--ink);color:#f9f5ec;padding:70px 0}.cta-grid{display:flex;justify-content:space-between;align-items:center;gap:30px}.cta .eyebrow{color:#c6a675}.cta p{max-width:600px;color:#d1d0c7}.cta h2{max-width:620px}
+.contact{background:var(--cream)}.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.contact p{color:var(--muted)}.contact-details{margin-top:25px;font-size:14px}.contact-details div{padding:12px 0;border-bottom:1px solid var(--line)}form{background:var(--paper);padding:30px;border:1px solid var(--line)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:bold;margin-bottom:7px}input,select,textarea{width:100%;padding:13px;border:1px solid #d7d1c5;background:#fffefa;font:14px Arial;color:var(--ink);border-radius:0}textarea{min-height:120px;resize:vertical}.field.full{grid-column:1/-1}.form-note{font-size:11px;color:var(--muted);margin:12px 0 20px}footer{background:#171915;color:#e8e3d8;padding:30px 0;font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-brand{font:20px Georgia,serif}.footer-muted{color:#aaa99f}
+@media(max-width:800px){.navlinks{display:none;position:absolute;left:0;right:0;top:82px;background:var(--paper);padding:20px 4%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.menu{display:block}.nav .btn{display:none}.hero{grid-template-columns:1fr}.hero-copy{padding:65px 6%}.hero-image{min-height:340px;order:-1}.trust .wrap{grid-template-columns:1fr 1fr}.trust-item:nth-child(2){border:0}.products{grid-template-columns:1fr 1fr}.about-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.about-photo{min-height:340px}.process-grid{grid-template-columns:1fr 1fr}.cta-grid{display:block}.cta .btn{margin-top:15px}}
+@media(max-width:520px){section{padding:60px 0}.products{grid-template-columns:1fr}.product-img{height:260px}.section-head{display:block}.section-head p{margin-top:15px}.process-grid{grid-template-columns:1fr 1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.trust-item{font-size:10px}.brand{font-size:19px}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>Furniture Manufacturing · India</span><span>Wholesale & International Enquiries Welcome</span></div></div>
+<header><div class="wrap nav">
+<a class="brand" href="#home">SURAJ FURNITURE<small>EXPORTS</small></a>
+<nav class="navlinks" id="navlinks"><a href="#home">Home</a><a href="#collections">Collections</a><a href="#company">Our Company</a><a href="#manufacturing">Manufacturing</a><a href="#contact">Contact</a></nav>
+<a class="btn" href="#contact">Request a Quote</a><button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+</div></header>
+<main>
+<section class="hero" id="home" style="padding:0">
+<div class="hero-copy"><div class="eyebrow">Made for living · Built for business</div><h1>Furniture made to bring spaces to life</h1><p>Suraj Furniture Exports connects thoughtful furniture design with manufacturing and B2B supply. We work with wholesale buyers, retailers, designers and international partners to develop furniture for their markets.</p><div class="actions"><a class="btn" href="#collections">Explore Collections</a><a class="btn outline" href="#contact">Discuss Your Requirements</a></div></div>
+<div class="hero-image" role="img" aria-label="Contemporary furniture in a warm neutral interior"></div>
+</section>
+<div class="trust"><div class="wrap"><div class="trust-item">Furniture Manufacturing</div><div class="trust-item">Wholesale Supply</div><div class="trust-item">Custom Requirements</div><div class="trust-item">International Enquiries</div></div></div>
+<section id="collections"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow">Our collections</div><h2>Furniture for considered spaces</h2></div><p>Explore our core product categories. Share your preferred styles, materials and quantities with us to discuss availability and custom requirements.</p></div>
+<div class="products">
+<article class="product"><div class="product-img" role="img" aria-label="Dining furniture"></div><div class="product-info"><h3>Dining Furniture</h3><p>Dining tables and chairs for residential, hospitality and commercial spaces.</p><a class="text-link" href="#contact" data-product="Dining Furniture">Enquire about this range</a></div></article>
+<article class="product"><div class="product-img" role="img" aria-label="Bedroom furniture"></div><div class="product-info"><h3>Bedroom & Storage</h3><p>Beds, cabinets and storage pieces designed around your project needs.</p><a class="text-link" href="#contact" data-product="Bedroom & Storage">Enquire about this range</a></div></article>
+<article class="product"><div class="product-img" role="img" aria-label="Home and office furniture"></div><div class="product-info"><h3>Living & Occasional</h3><p>Coffee tables, sideboards, consoles and complementary furniture.</p><a class="text-link" href="#contact" data-product="Living & Occasional">Enquire about this range</a></div></article>
+</div></div></section>
+<section class="about" id="company"><div class="wrap about-grid"><div class="about-photo" role="img" aria-label="Warm modern interior with furniture"></div><div><div class="eyebrow">About Suraj Furniture Exports</div><h2>A manufacturing partner for your business</h2><p>We aim to make furniture sourcing straightforward for trade buyers. From product discussions and material choices to finishing requirements and order planning, our approach begins with understanding what your market needs.</p><p>Whether you are sourcing a collection, developing a custom piece or exploring a long-term supply relationship, we welcome a conversation about your requirements.</p><div class="features"><div class="feature"><strong>Trade-focused</strong><span>Designed for wholesale and B2B enquiries</span></div><div class="feature"><strong>Product flexibility</strong><span>Discuss styles, finishes and specifications</span></div><div class="feature"><strong>Quality-minded</strong><span>Clear expectations from development to dispatch</span></div><div class="feature"><strong>Buyer partnership</strong><span>Communication built around your order needs</span></div></div></div></div></section>
+<section id="manufacturing"><div class="wrap"><div class="eyebrow">How we work</div><h2 style="font:normal clamp(32px,4vw,48px)/1.1 Georgia,serif;margin:10px 0">From requirement to ready-to-ship furniture</h2><p style="max-width:650px;color:var(--muted)">Every project is different. We align on specifications, quantities and commercial terms before confirming production and delivery details.</p><div class="process-grid">
+<div class="process"><div class="number">01</div><h3>Understand</h3><p>Discuss your market, product range, quantity and intended use.</p></div>
+<div class="process"><div class="number">02</div><h3>Specify</h3><p>Review dimensions, materials, finishes, samples and packaging needs.</p></div>
+<div class="process"><div class="number">03</div><h3>Produce</h3><p>Confirm the production plan and quality expectations for the order.</p></div>
+<div class="process"><div class="number">04</div><h3>Coordinate</h3><p>Align on packing, dispatch planning and the agreed delivery terms.</p></div>
+</div></div></section>
+<div class="cta"><div class="wrap cta-grid"><div><div class="eyebrow">For wholesalers & global buyers</div><h2>Looking for a furniture supply partner?</h2><p>Tell us about your business, product interests and expected order volume. We will use those details to understand your enquiry and discuss next steps.</p></div><a class="btn" href="#contact" style="background:#b18a55;border-color:#b18a55">Start an Enquiry</a></div></div>
+<section class="contact" id="contact"><div class="wrap contact-grid"><div><div class="eyebrow">Let's talk business</div><h2 style="font:normal clamp(32px,4vw,48px)/1.1 Georgia,serif;margin:10px 0">Request a quotation</h2><p>Use the form to tell us what you are sourcing. Include your destination country, product category and approximate quantity so we can understand your requirements.</p><div class="contact-details"><div><strong>Business</strong><br>Suraj Furniture Exports</div><div><strong>Location</strong><br>India</div><div><strong>For</strong><br>Wholesale · B2B · International enquiries</div></div></div>
+<form id="quoteForm">
+<div class="form-grid">
+<div class="field"><label for="name">Your name *</label><input id="name" name="name" required placeholder="Full name"></div>
+<div class="field"><label for="companyName">Company</label><input id="companyName" name="company" placeholder="Company name"></div>
+<div class="field"><label for="email">Business email *</label><input id="email" name="email" type="email" required placeholder="you@company.com"></div>
+<div class="field"><label for="country">Country *</label><input id="country" name="country" required placeholder="Your country"></div>
+<div class="field"><label for="product">Product interest *</label><select id="product" name="product" required><option value="">Select a category</option><option>Dining Furniture</option><option>Bedroom & Storage</option><option>Living & Occasional</option><option>Custom / Project Furniture</option><option>Multiple Categories</option></select></div>
+<div class="field"><label for="quantity">Estimated quantity</label><select id="quantity" name="quantity"><option value="">Select quantity</option><option>Sample / prototype</option><option>1–25 pieces</option><option>26–100 pieces</option><option>101–500 pieces</option><option>500+ pieces</option><option>Not decided</option></select></div>
+<div class="field full"><label for="message">Tell us about your requirements *</label><textarea id="message" name="message" required placeholder="Product specifications, materials, finishes, target market, timeline or any other details"></textarea></div>
+</div>
+<p class="form-note">This demo form opens your email application with your enquiry prepared. Before publishing, connect it to your real business email or a secure form service.</p>
+<button class="btn" type="submit">Prepare Enquiry</button><p id="formStatus" aria-live="polite" class="form-note"></p>
+</form></div></section>
+</main>
+<footer><div class="wrap footer-row"><div><div class="footer-brand">SURAJ FURNITURE EXPORTS</div><div class="footer-muted">Furniture manufacturing · Wholesale · International supply</div></div><div class="footer-muted">© <span id="year"></span> Suraj Furniture Exports. All rights reserved.</div></div></footer>
+<script>
+const menu=document.getElementById('menu'), nav=document.getElementById('navlinks');
+menu.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+document.querySelectorAll('[data-product]').forEach(a=>a.addEventListener('click',()=>{document.getElementById('product').value=a.dataset.product;}));
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('quoteForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const d=new FormData(this);
+ const subject=encodeURIComponent('Furniture quotation enquiry — '+d.get('product'));
+ const body=encodeURIComponent(
+ 'Suraj Furniture Exports enquiry\\n\\nName: '+d.get('name')+
+ '\\nCompany: '+(d.get('company')||'Not provided')+
+ '\\nBusiness email: '+d.get('email')+
+ '\\nCountry: '+d.get('country')+
+ '\\nProduct interest: '+d.get('product')+
+ '\\nEstimated quantity: '+(d.get('quantity')||'Not provided')+
+ '\\n\\nRequirements:\\n'+d.get('message')+
+ '\\n\\nPlease replace the recipient address in the website code with your business email before launch.'
+ );
+ document.getElementById('formStatus').textContent='Your email draft is being prepared. The recipient email must be configured before this site goes live.';
+ window.location.href='mailto:YOUR-BUSINESS-EMAIL@example.com?subject='+subject+'&body='+body;
+});
+</script>
+</body>
+</html>
