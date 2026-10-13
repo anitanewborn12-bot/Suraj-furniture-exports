@@ -49,7 +49,7 @@ section{padding:90px 0}.section-head{display:flex;justify-content:space-between;
 <div class="process"><div class="number">04</div><h3>Coordinate</h3><p>Align on packing, dispatch planning and the agreed delivery terms.</p></div>
 </div></div></section>
 <div class="cta"><div class="wrap cta-grid"><div><div class="eyebrow">For wholesalers & global buyers</div><h2>Looking for a furniture supply partner?</h2><p>Tell us about your business, product interests and expected order volume. We will use those details to understand your enquiry and discuss next steps.</p></div><a class="btn" href="#contact" style="background:#b18a55;border-color:#b18a55">Start an Enquiry</a></div></div>
-<section class="contact" id="contact"><div class="wrap contact-grid"><div><div class="eyebrow">Let's talk business</div><h2 style="font:normal clamp(32px,4vw,48px)/1.1 Georgia,serif;margin:10px 0">Request a quotation</h2><p>Use the form to tell us what you are sourcing. Include your destination country, product category and approximate quantity so we can understand your requirements.</p><div class="contact-details"><div><strong>Business</strong><br>Suraj Furniture Exports</div><div><strong>Location</strong><br>India</div><div><strong>For</strong><br>Wholesale · B2B · International enquiries</div></div></div>
+<section class="contact" id="contact"><div class="wrap contact-grid"><div><div class="eyebrow">Let's talk business</div><h2 style="font:normal clamp(32px,4vw,48px)/1.1 Georgia,serif;margin:10px 0">Request a quotation</h2><p>Use the form to tell us what you are sourcing. Include your destination country, product category and approximate quantity so we can understand your requirements.</p><div class="contact-details"><div><strong>Business</strong><br>Suraj Furniture Exports</div><div><strong>Email</strong><br><a href="mailto:anitanewborn12@gmail.com">anitanewborn12@gmail.com</a></div><div><strong>WhatsApp</strong><br><a href="https://wa.me/917452914807" target="_blank" rel="noopener">+91 74529 14807</a></div><div><strong>Address</strong><br>Tank Road, Karol Bagh, New Delhi 110005, India</div><div><strong>For</strong><br>Wholesale · B2B · International enquiries</div><div><a class="btn outline" href="https://wa.me/917452914807" target="_blank" rel="noopener">Chat on WhatsApp</a> <a class="btn outline" href="mailto:anitanewborn12@gmail.com">Email us</a></div></div></div>
 <form id="quoteForm">
 <div class="form-grid">
 <div class="field"><label for="name">Your name *</label><input id="name" name="name" required placeholder="Full name"></div>
@@ -60,7 +60,7 @@ section{padding:90px 0}.section-head{display:flex;justify-content:space-between;
 <div class="field"><label for="quantity">Estimated quantity</label><select id="quantity" name="quantity"><option value="">Select quantity</option><option>Sample / prototype</option><option>1–25 pieces</option><option>26–100 pieces</option><option>101–500 pieces</option><option>500+ pieces</option><option>Not decided</option></select></div>
 <div class="field full"><label for="message">Tell us about your requirements *</label><textarea id="message" name="message" required placeholder="Product specifications, materials, finishes, target market, timeline or any other details"></textarea></div>
 </div>
-<p class="form-note">This demo form opens your email application with your enquiry prepared. Before publishing, connect it to your real business email or a secure form service.</p>
+<p class="form-note">When you submit this form, WhatsApp opens with your enquiry message ready to send to Suraj Furniture Exports. Please review the message and press Send in WhatsApp.</p>
 <button class="btn" type="submit">Prepare Enquiry</button><p id="formStatus" aria-live="polite" class="form-note"></p>
 </form></div></section>
 </main>
@@ -74,19 +74,17 @@ document.getElementById('year').textContent=new Date().getFullYear();
 document.getElementById('quoteForm').addEventListener('submit',function(e){
  e.preventDefault();
  const d=new FormData(this);
- const subject=encodeURIComponent('Furniture quotation enquiry — '+d.get('product'));
  const body=encodeURIComponent(
- 'Suraj Furniture Exports enquiry\\n\\nName: '+d.get('name')+
- '\\nCompany: '+(d.get('company')||'Not provided')+
- '\\nBusiness email: '+d.get('email')+
- '\\nCountry: '+d.get('country')+
- '\\nProduct interest: '+d.get('product')+
- '\\nEstimated quantity: '+(d.get('quantity')||'Not provided')+
- '\\n\\nRequirements:\\n'+d.get('message')+
- '\\n\\nPlease replace the recipient address in the website code with your business email before launch.'
+ 'Furniture quotation enquiry — Suraj Furniture Exports\n\nName: '+d.get('name')+
+ '\nCompany: '+(d.get('company')||'Not provided')+
+ '\nBusiness email: '+d.get('email')+
+ '\nCountry: '+d.get('country')+
+ '\nProduct interest: '+d.get('product')+
+ '\nEstimated quantity: '+(d.get('quantity')||'Not provided')+
+ '\n\nRequirements:\n'+d.get('message')
  );
- document.getElementById('formStatus').textContent='Your email draft is being prepared. The recipient email must be configured before this site goes live.';
- window.location.href='mailto:YOUR-BUSINESS-EMAIL@example.com?subject='+subject+'&body='+body;
+ document.getElementById('formStatus').textContent='Opening WhatsApp with your enquiry. Please press Send in WhatsApp to submit it.';
+ window.open('https://wa.me/917452914807?text='+body, '_blank', 'noopener');
 });
 </script>
 </body>
