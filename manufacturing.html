@@ -18,14 +18,18 @@ nav a:hover{color:#d6ad72}
 .hero{text-align:center;padding:75px 20px;background:#eee8df}
 .hero p{color:#977448;letter-spacing:3px;font-size:12px;font-weight:bold}
 .hero h1{font-family:Georgia,serif;font-size:42px;font-weight:normal;margin-top:12px}
-.container{max-width:1100px;margin:auto;padding:55px 25px}
+.container{max-width:1150px;margin:auto;padding:55px 25px}
 .intro{text-align:center;max-width:780px;margin:0 auto 45px}
 .intro h2,.section h2{font-family:Georgia,serif;font-size:30px;font-weight:normal}
 p{margin:12px 0;color:#625c54}
-.process{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.step{background:white;padding:27px;border:1px solid #e9e2d9}
+.process{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.step{background:white;border:1px solid #e9e2d9;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.step:hover{transform:translateY(-5px);box-shadow:0 12px 25px rgba(0,0,0,.08)}
+.step img{width:100%;height:235px;object-fit:cover;display:block}
+.step-content{padding:25px}
 .number{color:#a27b4e;font-size:13px;letter-spacing:2px;font-weight:bold}
 .step h3{font-family:Georgia,serif;font-size:22px;font-weight:normal;margin-top:10px}
+.step p{font-size:14px}
 .section{margin-top:55px}
 .section ul{padding-left:22px;color:#625c54}
 .section li{margin:10px 0}
@@ -35,11 +39,15 @@ p{margin:12px 0;color:#625c54}
 .highlight a{display:inline-block;margin-top:15px;color:#d6ad72;text-decoration:none}
 .footer{text-align:center;padding:25px;background:#17130f;color:#ddd;font-size:13px}
 .footer a{color:#d6ad72;text-decoration:none}
+@media(max-width:850px){
+.process{grid-template-columns:repeat(2,1fr)}
+}
 @media(max-width:700px){
 header{justify-content:center;text-align:center}
 nav{justify-content:center;gap:12px}
 .hero h1{font-size:32px}
 .process{grid-template-columns:1fr}
+.step img{height:250px}
 }
 </style>
 </head>
@@ -72,39 +80,57 @@ nav{justify-content:center;gap:12px}
 <section class="process">
 
 <div class="step">
+<img src="material-selection.jpg" alt="Raw materials selected for furniture manufacturing">
+<div class="step-content">
 <span class="number">01 / MATERIALS</span>
 <h3>Material Selection</h3>
 <p>We source suitable raw materials and components based on the furniture design, quality requirements and project specifications.</p>
 </div>
+</div>
 
 <div class="step">
+<img src="cutting-machining.jpg" alt="Wood cutting and machining process">
+<div class="step-content">
 <span class="number">02 / PREPARATION</span>
 <h3>Cutting & Machining</h3>
 <p>Materials are measured, cut and prepared to the required dimensions and shapes for each furniture component.</p>
 </div>
+</div>
 
 <div class="step">
+<img src="production-assembly.jpg" alt="Furniture production and assembly">
+<div class="step-content">
 <span class="number">03 / ASSEMBLY</span>
 <h3>Production & Assembly</h3>
 <p>Individual components are assembled with attention to structure, fit, stability and the intended design.</p>
 </div>
+</div>
 
 <div class="step">
+<img src="surface-finishing.jpg" alt="Furniture surface finishing">
+<div class="step-content">
 <span class="number">04 / FINISHING</span>
 <h3>Surface Finishing</h3>
 <p>Furniture receives the required surface preparation and finishing according to the agreed specifications.</p>
 </div>
+</div>
 
 <div class="step">
+<img src="quality-checks.jpg" alt="Furniture quality inspection">
+<div class="step-content">
 <span class="number">05 / INSPECTION</span>
 <h3>Quality Checks</h3>
 <p>Products are checked for dimensions, appearance, finish and overall workmanship before dispatch.</p>
 </div>
+</div>
 
 <div class="step">
+<img src="packing-delivery.jpg" alt="Furniture packing and delivery">
+<div class="step-content">
 <span class="number">06 / DELIVERY</span>
 <h3>Packing & Supply</h3>
 <p>Finished furniture is prepared for packing and delivery according to the order and destination requirements.</p>
+</div>
 </div>
 
 </section>
