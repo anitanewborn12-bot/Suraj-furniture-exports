@@ -4,120 +4,932 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Our Company | Suraj Furniture Exports</title>
-<meta name="description" content="Discover the story, values and business capabilities of Suraj Furniture Exports.">
+<meta name="description" content="Discover the story, values and furniture capabilities of Suraj Furniture Exports, established in 2012.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Italiana&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;color:#29251f;background:#faf9f6;line-height:1.7}
-header{background:#211b16;color:white;padding:22px 8%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
-header h2{font-family:Georgia,serif;letter-spacing:1px}
-nav{display:flex;gap:20px;flex-wrap:wrap}
-nav a{color:white;text-decoration:none;font-size:14px}
-nav a:hover{color:#d6ad72}
-.hero{text-align:center;padding:75px 20px;background:#eee8df}
-.hero p{color:#977448;letter-spacing:3px;font-size:12px;font-weight:bold}
-.hero h1{font-family:Georgia,serif;font-size:42px;font-weight:normal;margin-top:12px}
-.container{max-width:1050px;margin:auto;padding:55px 25px}
-.section{margin-bottom:45px}
-.eyebrow{color:#a27b4e;text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:bold}
-h2{font-family:Georgia,serif;font-size:30px;font-weight:normal;margin:10px 0}
-p{margin:12px 0;color:#625c54}
-.values{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:25px}
-.value{background:white;padding:25px;border:1px solid #e9e2d9}
-.value h3{font-family:Georgia,serif;font-size:21px;font-weight:normal}
-.highlight{background:#272019;padding:50px 25px;text-align:center;color:white}
-.highlight h2{color:white}
-.highlight p{color:#e2d8cb;max-width:750px;margin:15px auto}
-.highlight a{color:#d6ad72;text-decoration:none}
-.footer{text-align:center;padding:25px;background:#17130f;color:#ddd;font-size:13px}
-.footer a{color:#d6ad72;text-decoration:none}
-@media(max-width:700px){
-header{justify-content:center;text-align:center}
-nav{justify-content:center;gap:12px}
-.hero h1{font-size:32px}
-.values{grid-template-columns:1fr}
+:root{
+  --black:#171715;
+  --dark:#22211e;
+  --ivory:#f3efe7;
+  --gold:#c5a477;
+  --muted:#aaa49a;
+  --line:rgba(197,164,119,.25);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--black);
+  color:var(--ivory);
+  font-family:'DM Sans',sans-serif;
+  line-height:1.7;
+}
+
+a{text-decoration:none;color:inherit}
+
+.wrap{
+  width:min(1240px,88%);
+  margin:auto;
+}
+
+/* TOP BAR */
+
+.topbar{
+  background:#10100f;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  color:#aaa49a;
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.topbar-row{
+  min-height:37px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* NAVIGATION */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(23,23,21,.97);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(12px);
+}
+
+.nav{
+  min-height:88px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:25px;
+}
+
+.brand{
+  font-family:'Italiana',serif;
+  font-size:25px;
+  letter-spacing:2px;
+  line-height:1.05;
+  white-space:nowrap;
+}
+
+.brand small{
+  display:block;
+  color:var(--gold);
+  font-family:'DM Sans',sans-serif;
+  font-size:9px;
+  letter-spacing:6px;
+  margin-top:7px;
+}
+
+.navlinks{
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+
+.navlinks a{
+  color:#d0cbc2;
+  font-size:11px;
+  letter-spacing:1px;
+  transition:.3s;
+}
+
+.navlinks a:hover,
+.navlinks a.active{
+  color:var(--gold);
+}
+
+.btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  padding:14px 24px;
+  background:var(--gold);
+  border:1px solid var(--gold);
+  color:var(--black);
+  font-size:10px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  transition:.3s;
+}
+
+.btn:hover{
+  background:transparent;
+  color:var(--gold);
+}
+
+.menu{
+  display:none;
+  background:none;
+  border:1px solid var(--line);
+  color:var(--gold);
+  padding:9px 12px;
+  font-size:20px;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+  min-height:560px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(90deg,rgba(15,15,14,.94),rgba(15,15,14,.72) 48%,rgba(15,15,14,.2)),
+    url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=85')
+    center/cover no-repeat;
+}
+
+.hero-content{
+  width:min(1240px,88%);
+  margin:auto;
+  padding:100px 0;
+}
+
+.eyebrow{
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-family:'Italiana',serif;
+  font-size:clamp(52px,7vw,88px);
+  line-height:1.04;
+  font-weight:400;
+  max-width:760px;
+}
+
+.hero h1 em{
+  color:var(--gold);
+  font-style:normal;
+}
+
+.hero p{
+  color:#d0cbc2;
+  max-width:570px;
+  font-size:13px;
+  line-height:2;
+  margin-top:25px;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:32px;
+}
+
+.btn-outline{
+  background:transparent;
+  color:var(--ivory);
+}
+
+.btn-outline:hover{
+  background:var(--gold);
+  color:var(--black);
+}
+
+/* INTRODUCTION */
+
+.intro{
+  padding:105px 0;
+}
+
+.intro-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:90px;
+  align-items:start;
+}
+
+.intro-heading h2{
+  font-family:'Italiana',serif;
+  font-size:clamp(38px,5vw,58px);
+  line-height:1.12;
+  font-weight:400;
+}
+
+.intro-text p{
+  color:#b9b3a9;
+  font-size:13px;
+  line-height:2.1;
+  margin-bottom:18px;
+}
+
+.intro-text strong{
+  color:var(--ivory);
+  font-weight:500;
+}
+
+/* IMAGE AND STORY */
+
+.story{
+  background:#201f1c;
+  padding:100px 0;
+}
+
+.story-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:75px;
+  align-items:center;
+}
+
+.story-image{
+  width:100%;
+  height:570px;
+  object-fit:cover;
+  display:block;
+}
+
+.story-copy h2{
+  font-family:'Italiana',serif;
+  font-size:clamp(38px,5vw,58px);
+  line-height:1.12;
+  font-weight:400;
+  margin-bottom:25px;
+}
+
+.story-copy p{
+  color:#b9b3a9;
+  font-size:13px;
+  line-height:2.1;
+  margin-bottom:19px;
+}
+
+.story-signature{
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-top:28px;
+}
+
+/* JOURNEY */
+
+.journey{
+  padding:110px 0;
+}
+
+.section-heading{
+  text-align:center;
+  max-width:720px;
+  margin:0 auto 65px;
+}
+
+.section-heading h2{
+  font-family:'Italiana',serif;
+  font-size:clamp(38px,5vw,58px);
+  font-weight:400;
+  line-height:1.15;
+}
+
+.section-heading p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:2;
+  margin-top:17px;
+}
+
+.timeline{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.timeline-card{
+  padding:32px 28px;
+  border-top:1px solid var(--gold);
+  background:var(--dark);
+  min-height:260px;
+}
+
+.timeline-year{
+  color:var(--gold);
+  font-family:'Italiana',serif;
+  font-size:39px;
+  margin-bottom:18px;
+}
+
+.timeline-card h3{
+  font-family:'Italiana',serif;
+  font-size:25px;
+  font-weight:400;
+  margin-bottom:12px;
+}
+
+.timeline-card p{
+  color:#aaa49a;
+  font-size:12px;
+  line-height:2;
+}
+
+/* WHAT WE DO */
+
+.capabilities{
+  background:var(--ivory);
+  color:var(--black);
+  padding:100px 0;
+}
+
+.capabilities-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:80px;
+}
+
+.capabilities h2{
+  font-family:'Italiana',serif;
+  font-size:clamp(38px,5vw,58px);
+  line-height:1.12;
+  font-weight:400;
+}
+
+.capabilities-intro{
+  color:#716a60;
+  font-size:13px;
+  line-height:2;
+  margin-top:20px;
+}
+
+.product-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0 35px;
+}
+
+.product-list div{
+  border-bottom:1px solid #cfc5b6;
+  padding:17px 0;
+  font-family:'Italiana',serif;
+  font-size:23px;
+}
+
+.product-list span{
+  color:#a27b4e;
+  font-family:'DM Sans',sans-serif;
+  font-size:10px;
+  letter-spacing:2px;
+  margin-right:12px;
+}
+
+/* VALUES */
+
+.values{
+  padding:110px 0;
+}
+
+.values-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.value-card{
+  padding:35px 30px;
+  border:1px solid var(--line);
+  min-height:245px;
+  transition:.3s;
+}
+
+.value-card:hover{
+  background:var(--dark);
+  transform:translateY(-5px);
+}
+
+.value-number{
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:3px;
+  margin-bottom:28px;
+}
+
+.value-card h3{
+  font-family:'Italiana',serif;
+  font-size:31px;
+  font-weight:400;
+  margin-bottom:12px;
+}
+
+.value-card p{
+  color:var(--muted);
+  font-size:12px;
+  line-height:2;
+}
+
+/* CLOSING */
+
+.closing{
+  padding:110px 20px;
+  text-align:center;
+  background:
+    linear-gradient(rgba(15,15,14,.86),rgba(15,15,14,.92)),
+    url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85')
+    center/cover no-repeat;
+}
+
+.closing h2{
+  font-family:'Italiana',serif;
+  font-size:clamp(40px,5vw,62px);
+  font-weight:400;
+  line-height:1.12;
+}
+
+.closing p{
+  color:#c4beb4;
+  max-width:690px;
+  margin:20px auto 30px;
+  font-size:13px;
+  line-height:2;
+}
+
+/* FOOTER */
+
+footer{
+  background:#10100f;
+  border-top:1px solid var(--line);
+  padding:35px 0;
+}
+
+.footer-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.footer-brand{
+  font-family:'Italiana',serif;
+  font-size:20px;
+  letter-spacing:2px;
+}
+
+.footer-muted{
+  color:#88847c;
+  font-size:10px;
+}
+
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.footer-links a{
+  color:#c5bfb4;
+  font-size:11px;
+}
+
+.footer-links a:hover{
+  color:var(--gold);
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+  .navlinks{gap:13px}
+  .navlinks a{font-size:10px}
+  .nav>.btn{display:none}
+}
+
+@media(max-width:760px){
+  .topbar-row{
+    justify-content:center;
+    text-align:center;
+    padding:8px 0;
+  }
+
+  .topbar-row span:last-child{display:none}
+
+  .nav{
+    min-height:75px;
+    flex-wrap:wrap;
+  }
+
+  .brand{font-size:22px}
+
+  .menu{display:block}
+
+  .navlinks{
+    display:none;
+    width:100%;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:0;
+    padding:5px 0 18px;
+  }
+
+  .navlinks.open{display:flex}
+
+  .navlinks a{
+    width:100%;
+    padding:12px 0;
+    border-top:1px solid rgba(255,255,255,.07);
+    font-size:12px;
+  }
+
+  .hero{
+    min-height:490px;
+    background-position:60% center;
+  }
+
+  .hero-content{padding:80px 0}
+
+  .hero h1{font-size:53px}
+
+  .intro,
+  .journey,
+  .values{padding:75px 0}
+
+  .intro-grid,
+  .story-grid,
+  .capabilities-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .story{padding:75px 0}
+
+  .story-image{height:380px}
+
+  .timeline,
+  .values-grid{
+    grid-template-columns:1fr;
+  }
+
+  .section-heading{margin-bottom:40px}
+
+  .capabilities{padding:75px 0}
+
+  .product-list{gap:0 18px}
+
+  .product-list div{font-size:19px}
+
+  .closing{padding:80px 20px}
+
+  .footer-row{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
+
+@media(max-width:420px){
+  .hero h1{font-size:45px}
+  .product-list{grid-template-columns:1fr}
 }
 </style>
 </head>
 
 <body>
+
+<div class="topbar">
+  <div class="wrap topbar-row">
+    <span>Suraj Furniture Exports · India</span>
+    <span>Furniture Manufacturing · Wholesale · International Supply</span>
+  </div>
+</div>
+
 <header>
-<h2>SURAJ FURNITURE EXPORTS</h2>
-<nav>
-<a href="index.html">Home</a>
-<a href="collections.html">Collections</a>
-<a href="company.html">Our Company</a>
-<a href="manufacturing.html">Manufacturing</a>
-<a href="director.html">Leadership</a>
-<a href="contact.html">Contact</a>
-</nav>
+  <div class="wrap nav">
+
+    <a class="brand" href="index.html">
+      SURAJ FURNITURE
+      <small>EXPORTS</small>
+    </a>
+
+    <nav class="navlinks" id="navlinks">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="company.html" class="active">Our Company</a>
+      <a href="manufacturing.html">Manufacturing</a>
+      <a href="director.html">Leadership</a>
+      <a href="anita-chauhan.html">Anita Chauhan</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <a class="btn" href="index.html#contact">Request a Quote</a>
+
+    <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+
+  </div>
 </header>
 
+<main>
+
+<!-- HERO -->
+
 <section class="hero">
-<p>OUR STORY • OUR VALUES • OUR COMMITMENT</p>
-<h1>About Our Company</h1>
+  <div class="hero-content">
+
+    <div class="eyebrow">Our Story · Our Values · Our Commitment</div>
+
+    <h1>
+      A Legacy of<br>
+      Craftsmanship <em>& Trust</em>
+    </h1>
+
+    <p>
+      Discover the journey of Suraj Furniture Exports
+      A family-owned furniture manufacturing and export business
+      built around craftsmanship, reliability and long-term relationships
+    </p>
+
+    <div class="hero-actions">
+      <a href="#our-story" class="btn">Discover Our Story</a>
+      <a href="index.html#contact" class="btn btn-outline">Connect With Us</a>
+    </div>
+
+  </div>
 </section>
 
-<main class="container">
+<!-- INTRODUCTION -->
 
-<section class="section">
-<span class="eyebrow">Who We Are</span>
-<h2>Building Trust Through Furniture</h2>
-<p>Established in 2012, Suraj Furniture Exports is a family-owned furniture manufacturing and export business founded by Suraj Chauhan. What began as a vision to deliver quality furniture has grown into a business built on craftsmanship, reliability and long-term relationships.</p>
-<p>Since 2020, the next generation has continued to lead the business, strengthening operations, expanding product offerings and developing opportunities in domestic and international markets.</p></section>
+<section class="intro wrap" id="our-story">
 
-<section class="section">
-<span class="eyebrow">Our Journey</span>
-<h2>A Family Business with a Vision</h2>
-<p><strong>2012 – The Beginning:</strong> Suraj Furniture Exports was established by Suraj Chauhan with a vision to build a trusted name in the furniture manufacturing industry.</p>
+  <div class="intro-grid">
 
-<p><strong>2020 – A New Chapter:</strong> The next generation took charge of the business, continuing its legacy while focusing on operational growth, expanding product offerings and developing domestic and international business relationships.</p>
+    <div class="intro-heading">
+      <div class="eyebrow">Who We Are</div>
+      <h2>Building Trust Through Furniture</h2>
+    </div>
 
-<p><strong>Today – Moving Forward:</strong> We continue to strengthen our manufacturing capabilities and serve our clients with quality furniture, customised solutions and dependable service.</p>
+    <div class="intro-text">
+      <p>
+        <strong>Established in 2012, Suraj Furniture Exports</strong>
+        is a family-owned furniture manufacturing and export business
+        founded by Suraj Chauhan
+      </p>
+
+      <p>
+        What began as a vision to deliver quality furniture has grown
+        into a business built on craftsmanship, reliability and
+        long-term relationships
+      </p>
+
+      <p>
+        Since 2020, the next generation has continued to lead the business
+        strengthening operations, expanding product offerings and
+        developing opportunities in domestic and international markets
+      </p>
+    </div>
+
+  </div>
+
 </section>
 
-<section class="section">
-<span class="eyebrow">What We Do</span>
-<h2>Furniture Solutions for Different Spaces</h2>
-<p>Our range includes dining tables, chairs, beds, cabinets, sideboards, coffee tables, consoles and customised furniture. We serve residential requirements as well as commercial and wholesale projects.</p>
-<p>We welcome enquiries from businesses, architects, interior professionals, project buyers and furniture wholesalers.</p>
+<!-- STORY -->
+
+<section class="story">
+  <div class="wrap story-grid">
+
+    <div>
+      <img
+        class="story-image"
+        src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85"
+        alt="Elegant furniture and interior design"
+        loading="lazy">
+    </div>
+
+    <div class="story-copy">
+
+      <div class="eyebrow">A Family Business With a Vision</div>
+
+      <h2>Rooted in Tradition Moving Forward With Purpose</h2>
+
+      <p>
+        Suraj Furniture Exports began with a vision to build a trusted
+        name in the furniture manufacturing industry
+      </p>
+
+      <p>
+        Founded by Suraj Chauhan in 2012, the business grew around
+        the values of quality, commitment and dependable relationships
+      </p>
+
+      <p>
+        In 2020, the next generation took charge of the business
+        continuing its legacy while focusing on operational growth
+        product development and new business relationships
+      </p>
+
+      <div class="story-signature">Suraj Furniture Exports · Since 2012</div>
+
+    </div>
+
+  </div>
 </section>
 
-<section class="section">
-<span class="eyebrow">Our Values</span>
-<h2>What Guides Our Work</h2>
+<!-- JOURNEY -->
 
-<div class="values">
-<div class="value">
-<h3>Quality</h3>
-<p>We focus on materials, workmanship and attention to detail.</p>
-</div>
+<section class="journey wrap">
 
-<div class="value">
-<h3>Trust</h3>
-<p>We believe in transparent communication and lasting business relationships.</p>
-</div>
+  <div class="section-heading">
+    <div class="eyebrow">Our Journey</div>
+    <h2>Three Chapters of Our Story</h2>
+    <p>
+      From the beginning of a family business to its continued development
+      our journey reflects a commitment to moving forward
+    </p>
+  </div>
 
-<div class="value">
-<h3>Growth</h3>
-<p>We aim to build long-term partnerships and explore new opportunities.</p>
-</div>
-</div>
+  <div class="timeline">
+
+    <article class="timeline-card">
+      <div class="timeline-year">2012</div>
+      <h3>The Beginning</h3>
+      <p>
+        Suraj Furniture Exports was established by Suraj Chauhan
+        with a vision to build a trusted name in the furniture
+        manufacturing industry
+      </p>
+    </article>
+
+    <article class="timeline-card">
+      <div class="timeline-year">2020</div>
+      <h3>A New Chapter</h3>
+      <p>
+        The next generation took charge of the business
+        continuing its legacy while focusing on operational growth
+        and developing domestic and international business relationships
+      </p>
+    </article>
+
+    <article class="timeline-card">
+      <div class="timeline-year">Today</div>
+      <h3>Moving Forward</h3>
+      <p>
+        We continue to strengthen our manufacturing capabilities
+        and serve clients with quality furniture customised solutions
+        and dependable service
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+
+<section class="capabilities">
+  <div class="wrap capabilities-grid">
+
+    <div>
+      <div class="eyebrow">What We Do</div>
+      <h2>Furniture Solutions for Different Spaces</h2>
+
+      <p class="capabilities-intro">
+        Our range includes furniture for residential requirements
+        as well as commercial and wholesale projects
+        We welcome enquiries from businesses architects interior
+        professionals project buyers and furniture wholesalers
+      </p>
+
+      <a href="collections.html" class="btn" style="margin-top:25px">
+        Explore Collections
+      </a>
+    </div>
+
+    <div class="product-list">
+
+      <div><span>01</span> Dining Tables</div>
+      <div><span>02</span> Chairs</div>
+      <div><span>03</span> Beds</div>
+      <div><span>04</span> Cabinets</div>
+      <div><span>05</span> Sideboards</div>
+      <div><span>06</span> Coffee Tables</div>
+      <div><span>07</span> Consoles</div>
+      <div><span>08</span> Custom Furniture</div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- VALUES -->
+
+<section class="values wrap">
+
+  <div class="section-heading">
+    <div class="eyebrow">Our Values</div>
+    <h2>What Guides Our Work</h2>
+    <p>
+      The principles behind our approach to furniture
+      manufacturing and business relationships
+    </p>
+  </div>
+
+  <div class="values-grid">
+
+    <article class="value-card">
+      <div class="value-number">01 / QUALITY</div>
+      <h3>Quality</h3>
+      <p>
+        We focus on materials workmanship and attention to detail
+        in the furniture we develop
+      </p>
+    </article>
+
+    <article class="value-card">
+      <div class="value-number">02 / TRUST</div>
+      <h3>Trust</h3>
+      <p>
+        We believe in transparent communication and lasting
+        business relationships built over time
+      </p>
+    </article>
+
+    <article class="value-card">
+      <div class="value-number">03 / GROWTH</div>
+      <h3>Growth</h3>
+      <p>
+        We aim to build long-term partnerships and explore
+        new opportunities in the furniture industry
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<!-- CLOSING -->
+
+<section class="closing">
+
+  <div class="eyebrow">Let's Build a Business Relationship</div>
+
+  <h2>Good Partnerships Begin<br>With a Conversation</h2>
+
+  <p>
+    Whether you are looking for wholesale furniture
+    commercial supply or a customised solution
+    we would be pleased to hear from you
+  </p>
+
+  <a href="index.html#contact" class="btn">Get in Touch</a>
+
 </section>
 
 </main>
 
-<section class="highlight">
-<h2>Let's Build a Business Relationship</h2>
-<p>Whether you are looking for wholesale furniture, commercial supply or a customised solution, we would be pleased to hear from you.</p>
-<a href="contact.html">Get in Touch →</a>
-</section>
+<!-- FOOTER -->
 
-<footer class="footer">
-<p>© 2026 Suraj Furniture Exports. All Rights Reserved.</p>
-<a href="index.html">Back to Home</a>
+<footer>
+  <div class="wrap footer-row">
+
+    <div>
+      <div class="footer-brand">SURAJ FURNITURE EXPORTS</div>
+      <div class="footer-muted">
+        Furniture Manufacturing · Wholesale · International Supply
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="company.html">Our Company</a>
+      <a href="manufacturing.html">Manufacturing</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+
+    <div class="footer-muted">
+      © <span id="year"></span> Suraj Furniture Exports. All Rights Reserved.
+    </div>
+
+  </div>
 </footer>
+
+<script>
+const menu = document.getElementById('menu');
+const nav = document.getElementById('navlinks');
+
+menu.addEventListener('click', () => {
+  nav.classList.toggle('open');
+});
+
+nav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+  });
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
