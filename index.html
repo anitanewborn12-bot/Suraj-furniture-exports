@@ -2,139 +2,382 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Suraj Furniture Exports is a furniture manufacturing partner for wholesale buyers, retailers, importers and international businesses. Explore our furniture collections and request a quotation.">
-<title>Suraj Furniture Exports | Furniture Manufacturing & B2B Supply</title>
+<meta name="theme-color" content="#f7f4ed">
+<title>Suraj Furniture Exports | Premium Furniture Manufacturing & B2B Supply</title>
 <link rel="icon" type="image/png" href="SURAJ%20Furniture%20Exports%20Logo.png">
 
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
-:root{--ink:#20221e;--muted:#6b6c63;--cream:#f5f1e9;--paper:#fffdf8;--olive:#58614b;--gold:#b18a55;--line:#e3ddd1}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
-a{color:inherit;text-decoration:none}
-.wrap{width:min(1180px,92%);margin:auto}
-
-.topbar{background:var(--ink);color:#f8f4ec;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:9px 0}
-.topbar .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-
-header{position:sticky;top:0;z-index:10;background:rgba(255,253,248,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;min-height:82px;gap:24px}
-.brand{font-family:Georgia,serif;font-size:22px;letter-spacing:.04em;line-height:1.1}
-.brand small{display:block;font:10px Arial,sans-serif;letter-spacing:.25em;color:var(--muted);margin-top:7px}
-.navlinks{display:flex;gap:26px;align-items:center;font-size:13px;color:#3d4038}
-.navlinks a:hover{color:var(--gold)}
-.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--olive);color:white;padding:13px 20px;border:1px solid var(--olive);font-size:12px;font-weight:bold;letter-spacing:.1em;text-transform:uppercase;transition:.2s;cursor:pointer}
-.btn:hover{background:#3f4837}
-.btn.outline{background:transparent;color:var(--ink);border-color:#a9a493}
-.btn.outline:hover{background:var(--ink);color:white}
-.menu{display:none;background:none;border:0;font-size:25px}
-
-.hero{min-height:600px;display:grid;grid-template-columns:1fr 1fr;background:var(--cream)}
-.hero-copy{padding:90px max(5vw,calc((100vw - 1180px)/2)) 80px max(4vw,calc((100vw - 1180px)/2));display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
-.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--olive);font-weight:bold}
-.hero h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(42px,5vw,68px);line-height:1.04;font-weight:normal;letter-spacing:-.035em;margin:22px 0}
-.hero p{max-width:470px;color:#5c5e55;font-size:16px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
-.hero-image{min-height:500px;background:linear-gradient(0deg,rgba(20,23,19,.12),rgba(20,23,19,.02)),url('https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1500&q=85') center/cover no-repeat}
-
-.trust{border-bottom:1px solid var(--line);background:var(--paper)}
-.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:22px 0;gap:18px}
-.trust-item{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#55584e;text-align:center;border-right:1px solid var(--line)}
-.trust-item:last-child{border:0}
-
-section{padding:90px 0}
-.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:35px}
-.section-head h2,.about h2,.cta h2{font:normal clamp(32px,4vw,48px)/1.1 Georgia,serif;letter-spacing:-.025em;margin:10px 0}
-.section-head p{max-width:450px;color:var(--muted);margin:0}
-.products{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.product{background:#f2eee6}
-.product-img{height:290px;background-size:cover;background-position:center}
-.product:nth-child(1) .product-img{background-image:url('https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=900&q=80')}
-.product:nth-child(2) .product-img{background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80')}
-.product:nth-child(3) .product-img{background-image:url('https://images.unsplash.com/photo-1499933374294-4584851497cc?auto=format&fit=crop&w=900&q=80')}
-.product-info{padding:20px 22px 24px}
-.product-info h3{font:normal 25px Georgia,serif;margin:0 0 7px}
-.product-info p{font-size:13px;color:var(--muted);margin:0 0 14px}
-.text-link{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:bold;border-bottom:1px solid var(--gold);padding-bottom:4px}
-
-.about{background:#e9e5da}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-.about-photo{min-height:480px;background:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85') center/cover}
-.about p{color:#5d5f56}
-.features{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
-.feature{border-top:1px solid #c9c3b6;padding-top:13px}
-.feature strong{display:block;font:normal 19px Georgia,serif;margin-bottom:4px}
-.feature span{font-size:12px;color:var(--muted)}
-
-.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:35px}
-.process{border-top:1px solid var(--gold);padding-top:18px}
-.number{font:normal 28px Georgia,serif;color:var(--gold)}
-.process h3{font:normal 21px Georgia,serif;margin:12px 0 8px}
-.process p{font-size:13px;color:var(--muted);margin:0}
-
-.cta{background:var(--ink);color:#f9f5ec;padding:70px 0}
-.cta-grid{display:flex;justify-content:space-between;align-items:center;gap:30px}
-.cta .eyebrow{color:#c6a675}
-.cta p{max-width:600px;color:#d1d0c7}
-.cta h2{max-width:620px}
-
-.contact{background:var(--cream)}
-.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
-.contact p{color:var(--muted)}
-.contact-details{margin-top:25px;font-size:14px}
-.contact-details div{padding:12px 0;border-bottom:1px solid var(--line)}
-
-.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
-.location-card{background:var(--paper);border:1px solid var(--line);padding:18px}
-.location-card h3{font:normal 20px Georgia,serif;margin:0 0 8px;color:var(--ink)}
-.location-card p{font-size:13px;margin:0 0 10px}
-.location-card a{font-size:12px;color:var(--olive);font-weight:bold;text-decoration:underline}
-
-form{background:var(--paper);padding:30px;border:1px solid var(--line)}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
-label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:bold;margin-bottom:7px}
-input,select,textarea{width:100%;padding:13px;border:1px solid #d7d1c5;background:#fffefa;font:14px Arial;color:var(--ink);border-radius:0}
-textarea{min-height:120px;resize:vertical}
-.field.full{grid-column:1/-1}
-.form-note{font-size:11px;color:var(--muted);margin:12px 0 20px}
-
-footer{background:#171915;color:#e8e3d8;padding:30px 0;font-size:12px}
-.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.footer-brand{font:20px Georgia,serif}
-.footer-muted{color:#aaa99f}
-
-@media(max-width:800px){
-.navlinks{display:none;position:absolute;left:0;right:0;top:82px;background:var(--paper);padding:20px 4%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}
-.navlinks.open{display:flex}
-.menu{display:block}
-.nav .btn{display:none}
-.hero{grid-template-columns:1fr}
-.hero-copy{padding:65px 6%}
-.hero-image{min-height:340px;order:-1}
-.trust .wrap{grid-template-columns:1fr 1fr}
-.trust-item:nth-child(2){border:0}
-.products{grid-template-columns:1fr 1fr}
-.about-grid,.contact-grid{grid-template-columns:1fr;gap:35px}
-.about-photo{min-height:340px}
-.process-grid{grid-template-columns:1fr 1fr}
-.cta-grid{display:block}
-.cta .btn{margin-top:15px}
+:root{
+  --ink:#25241f;
+  --muted:#77736a;
+  --cream:#f3efe7;
+  --paper:#fbfaf7;
+  --white:#fff;
+  --olive:#58614b;
+  --gold:#b18a55;
+  --line:#e4ded3;
+  --dark:#20221e;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'DM Sans',Arial,sans-serif;
 }
 
-@media(max-width:520px){
-section{padding:60px 0}
-.products{grid-template-columns:1fr}
-.product-img{height:260px}
-.section-head{display:block}
-.section-head p{margin-top:15px}
-.process-grid{grid-template-columns:1fr 1fr}
-.form-grid{grid-template-columns:1fr}
-.field.full{grid-column:auto}
-.trust-item{font-size:10px}
-.brand{font-size:19px}
-.location-grid{grid-template-columns:1fr}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:95px}
+body{
+  margin:0;
+  font-family:var(--sans);
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.7;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;object-fit:cover}
+button,input,select,textarea{font:inherit}
+.wrap{width:min(1200px,90%);margin:auto}
+.eyebrow{
+  font-size:10px;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--gold);
+  font-weight:700;
+}
+.section-title{
+  font:400 clamp(34px,4vw,52px)/1.15 var(--serif);
+  letter-spacing:-.025em;
+  margin:12px 0;
+}
+.section-description{color:var(--muted);max-width:570px;font-size:14px}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 23px;
+  background:var(--olive);
+  color:white;
+  border:1px solid var(--olive);
+  font-size:10px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-weight:700;
+  transition:.3s;
+}
+.btn:hover{background:var(--dark);border-color:var(--dark);transform:translateY(-2px)}
+.btn.light{background:transparent;border-color:#bdb5a7;color:var(--ink)}
+.btn.light:hover{background:var(--ink);color:white}
+.btn.gold{background:var(--gold);border-color:var(--gold)}
+.btn.gold:hover{background:#987144;border-color:#987144}
+
+/* Topbar */
+.topbar{
+  background:var(--dark);
+  color:#e8e2d6;
+  padding:9px 0;
+  font-size:10px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.topbar-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+
+/* Navigation */
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(251,250,247,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  min-height:84px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+.brand{
+  font:600 22px var(--serif);
+  letter-spacing:.06em;
+  line-height:1.1;
+  white-space:nowrap;
+}
+.brand small{
+  display:block;
+  font:600 9px var(--sans);
+  letter-spacing:.42em;
+  color:var(--gold);
+  margin-top:7px;
+}
+.navlinks{display:flex;align-items:center;gap:22px;font-size:11px}
+.navlinks a{transition:.2s}
+.navlinks a:hover{color:var(--gold)}
+.menu{
+  display:none;
+  border:0;
+  background:none;
+  color:var(--ink);
+  font-size:27px;
+  cursor:pointer;
+}
+
+/* Hero */
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1.05fr;
+  min-height:620px;
+  background:var(--cream);
+}
+.hero-copy{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  padding:80px 7vw 80px max(5vw,calc((100vw - 1200px)/2));
+}
+.hero h1{
+  font:400 clamp(43px,5vw,70px)/1.08 var(--serif);
+  letter-spacing:-.04em;
+  margin:22px 0;
+  max-width:580px;
+}
+.hero-copy p{max-width:470px;color:#6d695f;font-size:14px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.hero-image{
+  min-height:560px;
+  background:
+  linear-gradient(0deg,rgba(20,20,16,.12),transparent 40%),
+  url('https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1800&q=90') center/cover;
+}
+
+/* Trust strip */
+.trust{background:var(--paper);border-bottom:1px solid var(--line)}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);padding:25px 0;gap:15px}
+.trust-item{
+  text-align:center;
+  font-size:10px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#625f55;
+  border-right:1px solid var(--line);
+}
+.trust-item:last-child{border:0}
+
+/* Common sections */
+section{padding:95px 0}
+.section-heading{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:30px;
+  margin-bottom:38px;
+}
+.section-heading .section-description{max-width:430px;margin-bottom:7px}
+
+/* Collections */
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.product{background:#f1ede5;overflow:hidden}
+.product-img{
+  height:300px;
+  overflow:hidden;
+  background:#e9e3d8;
+}
+.product-img img{
+  height:100%;
+  transition:transform .7s;
+}
+.product:hover .product-img img{transform:scale(1.055)}
+.product-info{padding:22px 23px 26px}
+.product-info h3{font:400 25px var(--serif);margin:0 0 8px}
+.product-info p{font-size:12px;color:var(--muted);min-height:42px;margin:0 0 18px}
+.text-link{
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  border-bottom:1px solid var(--gold);
+  padding-bottom:5px;
+}
+
+/* About */
+.about{background:#eae5db}
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:75px;
+  align-items:center;
+}
+.about-photo{height:520px;overflow:hidden}
+.about-photo img{height:100%}
+.about-copy h2{font:400 clamp(34px,4vw,50px)/1.15 var(--serif);margin:14px 0 20px}
+.about-copy p{font-size:13px;color:#69665d}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px}
+.feature{border-top:1px solid #c9c2b5;padding-top:13px}
+.feature strong{display:block;font:400 19px var(--serif);margin-bottom:5px}
+.feature span{font-size:11px;color:var(--muted)}
+
+/* Image banner */
+.image-banner{
+  min-height:390px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  color:white;
+  background:
+  linear-gradient(90deg,rgba(22,23,19,.78),rgba(22,23,19,.15)),
+  url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85') center/cover;
+}
+.image-banner-content{max-width:600px;padding:65px 0}
+.image-banner h2{font:400 clamp(34px,4vw,52px)/1.15 var(--serif);margin:14px 0}
+.image-banner p{color:#e7e3db;font-size:13px;max-width:520px}
+
+/* Manufacturing */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:38px}
+.process{
+  border-top:1px solid var(--gold);
+  padding-top:18px;
+}
+.number{font:400 29px var(--serif);color:var(--gold)}
+.process h3{font:400 22px var(--serif);margin:13px 0 7px}
+.process p{font-size:12px;color:var(--muted);margin:0}
+
+/* Craft gallery */
+.gallery{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:16px;margin-top:35px}
+.gallery-item{height:290px;overflow:hidden}
+.gallery-item img{height:100%;transition:transform .7s}
+.gallery-item:hover img{transform:scale(1.05)}
+
+/* Export */
+.export{
+  background:var(--dark);
+  color:#f8f4eb;
+  padding:85px 0;
+}
+.export-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
+.export h2{font:400 clamp(34px,4vw,50px)/1.15 var(--serif);margin:13px 0}
+.export p{color:#cbc9c0;font-size:13px;max-width:600px}
+.export-points{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.export-point{border-top:1px solid #55564e;padding-top:13px;font-size:12px;color:#e8e2d6}
+
+/* CTA */
+.cta{background:var(--cream);padding:70px 0}
+.cta-grid{display:flex;justify-content:space-between;align-items:center;gap:35px}
+.cta h2{font:400 clamp(33px,4vw,47px)/1.15 var(--serif);margin:12px 0;max-width:670px}
+.cta p{font-size:13px;color:var(--muted);max-width:650px}
+
+/* Contact */
+.contact{background:#f1ede5}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:65px;align-items:start}
+.contact-intro h2{font:400 clamp(35px,4vw,49px)/1.15 var(--serif);margin:12px 0}
+.contact-intro p{font-size:13px;color:var(--muted)}
+.contact-details{margin-top:28px;font-size:13px}
+.detail{padding:14px 0;border-bottom:1px solid var(--line)}
+.detail strong{display:block;font-size:10px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:4px}
+.detail a{color:var(--olive)}
+.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:14px}
+.location-card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  padding:17px;
+}
+.location-card h3{font:400 20px var(--serif);margin:0 0 7px}
+.location-card p{font-size:11px;margin:0 0 10px}
+.location-card a{font-size:10px;color:var(--olive);font-weight:700;text-decoration:underline}
+
+form{background:var(--paper);padding:30px;border:1px solid var(--line)}
+.form-heading{font:400 26px var(--serif);margin:0 0 7px}
+.form-intro{font-size:12px;color:var(--muted);margin:0 0 23px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+label{
+  display:block;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  font-weight:700;
+  margin-bottom:7px;
+}
+input,select,textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #d9d2c6;
+  background:#fffefa;
+  font:13px var(--sans);
+  color:var(--ink);
+  border-radius:0;
+}
+input:focus,select:focus,textarea:focus{outline:1px solid var(--gold);border-color:var(--gold)}
+textarea{min-height:120px;resize:vertical}
+.field.full{grid-column:1/-1}
+.form-note{font-size:10px;color:var(--muted);margin:12px 0 20px}
+
+/* Footer */
+footer{background:#171915;color:#e8e3d8;padding:35px 0;font-size:11px}
+.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.footer-brand{font:400 21px var(--serif);letter-spacing:.06em}
+.footer-muted{color:#aaa99f;font-size:10px}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap}
+.footer-links a:hover{color:var(--gold)}
+
+/* Responsive */
+@media(max-width:1050px){
+  .navlinks{gap:13px;font-size:10px}
+  .nav .btn{padding:12px 14px}
+}
+@media(max-width:850px){
+  .navlinks{
+    display:none;
+    position:absolute;
+    left:0;right:0;top:84px;
+    background:var(--paper);
+    padding:22px 5%;
+    border-bottom:1px solid var(--line);
+    flex-direction:column;
+    align-items:flex-start;
+    gap:17px;
+  }
+  .navlinks.open{display:flex}
+  .menu{display:block}
+  .nav .btn{display:none}
+  .hero{grid-template-columns:1fr}
+  .hero-copy{padding:65px 6%}
+  .hero-image{min-height:380px;order:-1}
+  .trust-grid{grid-template-columns:1fr 1fr}
+  .trust-item:nth-child(2){border:0}
+  .products{grid-template-columns:1fr 1fr}
+  .about-grid,.contact-grid,.export-grid{grid-template-columns:1fr;gap:35px}
+  .about-photo{height:380px}
+  .process-grid{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .gallery-item:first-child{grid-column:1/-1}
+  .cta-grid{display:block}
+  .cta .btn{margin-top:15px}
+}
+@media(max-width:550px){
+  section{padding:65px 0}
+  .topbar{font-size:9px}
+  .topbar-row{justify-content:center;text-align:center}
+  .brand{font-size:19px}
+  .hero h1{font-size:45px}
+  .hero-image{min-height:290px}
+  .products{grid-template-columns:1fr}
+  .product-img{height:280px}
+  .section-heading{display:block}
+  .section-heading .section-description{margin-top:13px}
+  .process-grid{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr}
+  .gallery-item,.gallery-item:first-child{grid-column:auto;height:260px}
+  .form-grid{grid-template-columns:1fr}
+  .field.full{grid-column:auto}
+  .location-grid{grid-template-columns:1fr}
+  .trust-item{font-size:9px}
+  form{padding:21px}
+  .footer-row{align-items:flex-start;flex-direction:column}
 }
 </style>
 </head>
@@ -142,266 +385,497 @@ section{padding:60px 0}
 <body>
 
 <div class="topbar">
-<div class="wrap">
-<span>Furniture Manufacturing · India</span>
-<span>Wholesale & International Enquiries Welcome</span>
-</div>
+  <div class="wrap topbar-row">
+    <span>Furniture Manufacturing · India</span>
+    <span>Wholesale & International Enquiries Welcome</span>
+  </div>
 </div>
 
 <header>
-<div class="wrap nav">
-<a class="brand" href="index.html">SURAJ FURNITURE<small>EXPORTS</small></a>
-<nav class="navlinks" id="navlinks">
-<a href="index.html">Home</a>
-<a href="collections.html">Collections</a>
-<a href="company.html">Our Company</a>
-<a href="manufacturing.html">Manufacturing</a>
-<a href="director.html">Leadership</a>
-<a href="anita-chauhan.html">Anita Chauhan</a>
-<a href="contact.html">Contact</a>
-</nav>
-<a class="btn" href="contact.html">Request a Quote</a>
-<button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-</div>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">SURAJ FURNITURE<small>EXPORTS</small></a>
+
+    <nav class="navlinks" id="navlinks">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="company.html">Our Company</a>
+      <a href="manufacturing.html">Manufacturing</a>
+      <a href="director.html">Leadership</a>
+      <a href="anita-chauhan.html">Anita Chauhan</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a class="btn" href="contact.html">Request a Quote</a>
+    <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  </div>
 </header>
 
 <main>
 
+<!-- HERO -->
 <section class="hero" id="home" style="padding:0">
-<div class="hero-copy">
-<div class="eyebrow">Made for living · Built for business</div>
-<h1>Furniture made to bring spaces to life</h1>
-<p>Suraj Furniture Exports connects thoughtful furniture design with manufacturing and B2B supply. We work with wholesale buyers, retailers, designers and international partners to develop furniture for their markets.</p>
-<div class="actions">
-<a class="btn" href="collections.html">Explore Collections</a>
-<a class="btn outline" href="contact.html">Discuss Your Requirements</a>
-</div>
-</div>
-<div class="hero-image" role="img" aria-label="Contemporary furniture in a warm neutral interior"></div>
+  <div class="hero-copy">
+    <div class="eyebrow">Made for living · Built for business</div>
+    <h1>Thoughtfully crafted furniture for inspiring spaces</h1>
+    <p>
+      Suraj Furniture Exports connects thoughtful furniture design with
+      manufacturing and B2B supply. We work with wholesale buyers,
+      retailers, designers and international partners to develop furniture
+      for their markets.
+    </p>
+    <div class="hero-actions">
+      <a class="btn" href="collections.html">Explore Collections</a>
+      <a class="btn light" href="contact.html">Discuss Your Requirements</a>
+    </div>
+  </div>
+  <div class="hero-image" role="img" aria-label="Contemporary furniture in a warm luxury interior"></div>
 </section>
 
+<!-- TRUST -->
 <div class="trust">
-<div class="wrap">
-<div class="trust-item">Furniture Manufacturing</div>
-<div class="trust-item">Wholesale Supply</div>
-<div class="trust-item">Custom Requirements</div>
-<div class="trust-item">International Enquiries</div>
-</div>
+  <div class="wrap trust-grid">
+    <div class="trust-item">Furniture Manufacturing</div>
+    <div class="trust-item">Wholesale Supply</div>
+    <div class="trust-item">Custom Requirements</div>
+    <div class="trust-item">International Enquiries</div>
+  </div>
 </div>
 
+<!-- COLLECTIONS -->
 <section id="collections">
-<div class="wrap">
-<div class="section-head">
-<div>
-<div class="eyebrow">Our collections</div>
-<h2>Furniture for considered spaces</h2>
-</div>
-<p>Explore our core product categories. Share your preferred styles, materials and quantities with us to discuss availability and custom requirements.</p>
-</div>
-<div class="products">
-<article class="product">
-<div class="product-img" role="img" aria-label="Home and office furniture"></div>
-<div class="product-info">
-<h3>Living & Occasional</h3>
-<p>Coffee tables, sideboards, consoles and complementary furniture.</p>
-<a class="text-link" href="contact.html" data-product="Living & Occasional">Enquire about this range</a>
-</div>
-</article>
-</div>
-</div>
+  <div class="wrap">
+    <div class="section-heading">
+      <div>
+        <div class="eyebrow">Our collections</div>
+        <h2 class="section-title">Furniture for considered spaces</h2>
+      </div>
+      <p class="section-description">
+        Explore our core product categories. Share your preferred styles,
+        materials and quantities with us to discuss availability and
+        custom requirements.
+      </p>
+    </div>
+
+    <div class="products">
+
+      <article class="product">
+        <div class="product-img">
+          <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1000&q=85" alt="Contemporary living room furniture" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>Living & Occasional</h3>
+          <p>Coffee tables, sideboards, consoles and complementary furniture.</p>
+          <a class="text-link" href="contact.html?product=Living%20%26%20Occasional">Enquire about this range</a>
+        </div>
+      </article>
+
+      <article class="product">
+        <div class="product-img">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85" alt="Elegant dining and living interior" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>Dining Furniture</h3>
+          <p>Dining tables, dining chairs and furniture for shared spaces.</p>
+          <a class="text-link" href="contact.html?product=Dining%20Furniture">Enquire about this range</a>
+        </div>
+      </article>
+
+      <article class="product">
+        <div class="product-img">
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=85" alt="Premium bedroom interior" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>Bedroom & Storage</h3>
+          <p>Beds, bedside tables, cabinets and functional storage solutions.</p>
+          <a class="text-link" href="contact.html?product=Bedroom%20%26%20Storage">Enquire about this range</a>
+        </div>
+      </article>
+
+      <article class="product">
+        <div class="product-img">
+          <img src="https://images.unsplash.com/photo-1499933374294-4584851497cc?auto=format&fit=crop&w=1000&q=85" alt="Modern wooden office furniture" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>Office Furniture</h3>
+          <p>Furniture solutions for offices, workspaces and commercial projects.</p>
+          <a class="text-link" href="contact.html?product=Office%20Furniture">Enquire about this range</a>
+        </div>
+      </article>
+
+      <article class="product">
+        <div class="product-img">
+          <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1000&q=85" alt="Contemporary furniture and storage" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>Cabinets & Sideboards</h3>
+          <p>Practical storage furniture with considered design and finishes.</p>
+          <a class="text-link" href="contact.html?product=Cabinets%20%26%20Sideboards">Enquire about this range</a>
+        </div>
+      </article>
+
+      <article class="product">
+        <div class="product-img">
+          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=85" alt="Custom contemporary furniture interior" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>Custom Furniture</h3>
+          <p>Discuss bespoke dimensions, materials, finishes and project needs.</p>
+          <a class="text-link" href="contact.html?product=Custom%20Project%20Furniture">Enquire about this range</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
 </section>
 
+<!-- ABOUT -->
 <section class="about" id="company">
-<div class="wrap about-grid">
-<div class="about-photo" role="img" aria-label="Warm modern interior with furniture"></div>
-<div>
-<div class="eyebrow">About Suraj Furniture Exports</div>
-<h2>A manufacturing partner for your business</h2>
-<p>We aim to make furniture sourcing straightforward for trade buyers. From product discussions and material choices to finishing requirements and order planning, our approach begins with understanding what your market needs.</p>
-<p>Whether you are sourcing a collection, developing a custom piece or exploring a long-term supply relationship, we welcome a conversation about your requirements.</p>
-<div class="features">
-<div class="feature"><strong>Trade-focused</strong><span>Designed for wholesale and B2B enquiries</span></div>
-<div class="feature"><strong>Product flexibility</strong><span>Discuss styles, finishes and specifications</span></div>
-<div class="feature"><strong>Quality-minded</strong><span>Clear expectations from development to dispatch</span></div>
-<div class="feature"><strong>Buyer partnership</strong><span>Communication built around your order needs</span></div>
-</div>
-</div>
-</div>
+  <div class="wrap about-grid">
+
+    <div class="about-photo">
+      <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85" alt="Warm modern interior with carefully selected furniture" loading="lazy">
+    </div>
+
+    <div class="about-copy">
+      <div class="eyebrow">About Suraj Furniture Exports</div>
+      <h2>A manufacturing partner for your business</h2>
+
+      <p>
+        We aim to make furniture sourcing straightforward for trade buyers.
+        From product discussions and material choices to finishing
+        requirements and order planning, our approach begins with
+        understanding what your market needs.
+      </p>
+
+      <p>
+        Whether you are sourcing a collection, developing a custom piece
+        or exploring a long-term supply relationship, we welcome a
+        conversation about your requirements.
+      </p>
+
+      <div class="features">
+        <div class="feature">
+          <strong>Trade-focused</strong>
+          <span>Designed for wholesale and B2B enquiries</span>
+        </div>
+        <div class="feature">
+          <strong>Product flexibility</strong>
+          <span>Discuss styles, finishes and specifications</span>
+        </div>
+        <div class="feature">
+          <strong>Quality-minded</strong>
+          <span>Clear expectations from development to dispatch</span>
+        </div>
+        <div class="feature">
+          <strong>Buyer partnership</strong>
+          <span>Communication built around your order needs</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
+<!-- IMAGE BANNER -->
+<div class="image-banner">
+  <div class="wrap image-banner-content">
+    <div class="eyebrow">Design · Detail · Craftsmanship</div>
+    <h2>Where thoughtful design meets everyday function</h2>
+    <p>
+      Furniture is more than an object. It shapes how people live,
+      work and experience their surroundings.
+    </p>
+    <a class="btn gold" href="collections.html">Discover Our Collections</a>
+  </div>
+</div>
+
+<!-- MANUFACTURING -->
 <section id="manufacturing">
-<div class="wrap">
-<div class="eyebrow">How we work</div>
-<h2 style="font:normal clamp(32px,4vw,48px)/1.1 Georgia,serif;margin:10px 0">From requirement to ready-to-ship furniture</h2>
-<p style="max-width:650px;color:var(--muted)">Every project is different. We align on specifications, quantities and commercial terms before confirming production and delivery details.</p>
-<div class="process-grid">
-<div class="process"><div class="number">01</div><h3>Understand</h3><p>Discuss your market, product range, quantity and intended use.</p></div>
-<div class="process"><div class="number">02</div><h3>Specify</h3><p>Review dimensions, materials, finishes, samples and packaging needs.</p></div>
-<div class="process"><div class="number">03</div><h3>Produce</h3><p>Confirm the production plan and quality expectations for the order.</p></div>
-<div class="process"><div class="number">04</div><h3>Coordinate</h3><p>Align on packing, dispatch planning and the agreed delivery terms.</p></div>
-</div>
-</div>
+  <div class="wrap">
+    <div class="eyebrow">How we work</div>
+    <h2 class="section-title">From requirement to ready-to-ship furniture</h2>
+    <p class="section-description">
+      Every project is different. We align on specifications, quantities
+      and commercial terms before confirming production and delivery details.
+    </p>
+
+    <div class="process-grid">
+      <div class="process">
+        <div class="number">01</div>
+        <h3>Understand</h3>
+        <p>Discuss your market, product range, quantity and intended use.</p>
+      </div>
+      <div class="process">
+        <div class="number">02</div>
+        <h3>Specify</h3>
+        <p>Review dimensions, materials, finishes, samples and packaging needs.</p>
+      </div>
+      <div class="process">
+        <div class="number">03</div>
+        <h3>Produce</h3>
+        <p>Confirm the production plan and quality expectations for the order.</p>
+      </div>
+      <div class="process">
+        <div class="number">04</div>
+        <h3>Coordinate</h3>
+        <p>Align on packing, dispatch planning and the agreed delivery terms.</p>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1538688423619-a81d3f23454b?auto=format&fit=crop&w=1000&q=85" alt="Woodworking and furniture craftsmanship" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Furniture finishing and interior details" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Finished contemporary furniture interior" loading="lazy">
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- EXPORT & B2B -->
+<section class="export" id="export">
+  <div class="wrap export-grid">
+    <div>
+      <div class="eyebrow">For wholesalers & global buyers</div>
+      <h2>Building furniture supply relationships beyond borders</h2>
+      <p>
+        We welcome enquiries from wholesale buyers, retailers, importers,
+        designers and businesses exploring furniture sourcing opportunities.
+        Tell us about your market, product interests and expected quantities
+        so we can discuss your requirements.
+      </p>
+      <a class="btn gold" href="#contact">Discuss a Business Enquiry</a>
+    </div>
+
+    <div class="export-points">
+      <div class="export-point">Wholesale & bulk supply</div>
+      <div class="export-point">Custom furniture requirements</div>
+      <div class="export-point">Retailer & importer enquiries</div>
+      <div class="export-point">Commercial furniture projects</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
 <div class="cta">
-<div class="wrap cta-grid">
-<div>
-<div class="eyebrow">For wholesalers & global buyers</div>
-<h2>Looking for a furniture supply partner?</h2>
-<p>Tell us about your business, product interests and expected order volume. We will use those details to understand your enquiry and discuss next steps.</p>
-</div>
-<a class="btn" href="#contact" style="background:#b18a55;border-color:#b18a55">Start an Enquiry</a>
-</div>
+  <div class="wrap cta-grid">
+    <div>
+      <div class="eyebrow">Let's build a business relationship</div>
+      <h2>Looking for a furniture supply partner?</h2>
+      <p>
+        Tell us about your business, product interests and expected order
+        volume. We will use those details to understand your enquiry and
+        discuss next steps.
+      </p>
+    </div>
+    <a class="btn" href="#contact">Start an Enquiry</a>
+  </div>
 </div>
 
+<!-- CONTACT -->
 <section class="contact" id="contact">
-<div class="wrap contact-grid">
+  <div class="wrap contact-grid">
 
-<div>
-<div class="eyebrow">Let's talk business</div>
-<h2 style="font:normal clamp(32px,4vw,48px)/1.1 Georgia,serif;margin:10px 0">Request a quotation</h2>
-<p>Use the form to tell us what you are sourcing. Include your destination country, product category and approximate quantity so we can understand your requirements.</p>
+    <div class="contact-intro">
+      <div class="eyebrow">Let's talk business</div>
+      <h2>Request a quotation</h2>
+      <p>
+        Use the form to tell us what you are sourcing. Include your
+        destination country, product category and approximate quantity
+        so we can understand your requirements.
+      </p>
 
-<div class="contact-details">
+      <div class="contact-details">
 
-<div><strong>Business</strong><br>Suraj Furniture Exports</div>
+        <div class="detail">
+          <strong>Business</strong>
+          Suraj Furniture Exports
+        </div>
 
-<div><strong>Email</strong><br>
-<a href="mailto:anitanewborn12@gmail.com">anitanewborn12@gmail.com</a>
-</div>
+        <div class="detail">
+          <strong>Email</strong>
+          <a href="mailto:anitanewborn12@gmail.com">anitanewborn12@gmail.com</a>
+        </div>
 
-<div>
-<strong>Our Business Locations</strong>
-<div class="location-grid">
+        <div class="detail">
+          <strong>Our Business Locations</strong>
 
-<div class="location-card">
-<h3>Delhi Office</h3>
-<p>Tank Road, Karol Bagh<br>New Delhi 110005<br>India</p>
-<a href="https://www.google.com/maps/search/?api=1&query=Tank+Road+Karol+Bagh+New+Delhi+110005" target="_blank" rel="noopener">View on Google Maps →</a>
-</div>
+          <div class="location-grid">
 
-<div class="location-card">
-<h3>Kolkata Location</h3>
-<p>Kolkata<br>West Bengal<br>India</p>
-<a href="https://www.google.com/maps?q=22.572722,88.406917" target="_blank" rel="noopener">View on Google Maps →</a>
-</div>
+            <div class="location-card">
+              <h3>Delhi Office</h3>
+              <p>Tank Road, Karol Bagh<br>New Delhi 110005<br>India</p>
+              <a href="https://www.google.com/maps/search/?api=1&query=Tank+Road+Karol+Bagh+New+Delhi+110005" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
 
-</div>
-</div>
+            <div class="location-card">
+              <h3>Kolkata Location</h3>
+              <p>Kolkata<br>West Bengal<br>India</p>
+              <a href="https://www.google.com/maps?q=22.572722,88.406917" target="_blank" rel="noopener">View on Google Maps →</a>
+            </div>
 
-<div><strong>For</strong><br>Wholesale · B2B · International enquiries</div>
+          </div>
+        </div>
 
-</div>
-</div>
+        <div class="detail">
+          <strong>For</strong>
+          Wholesale · B2B · International enquiries
+        </div>
 
-<form id="quoteForm">
-<div class="form-grid">
+      </div>
+    </div>
 
-<div class="field">
-<label for="name">Your name *</label>
-<input id="name" name="name" required placeholder="Full name">
-</div>
+    <form id="quoteForm">
+      <h3 class="form-heading">Tell us about your project</h3>
+      <p class="form-intro">Share your requirements and our team can understand your enquiry.</p>
 
-<div class="field">
-<label for="companyName">Company</label>
-<input id="companyName" name="company" placeholder="Company name">
-</div>
+      <div class="form-grid">
 
-<div class="field">
-<label for="email">Business email *</label>
-<input id="email" name="email" type="email" required placeholder="you@company.com">
-</div>
+        <div class="field">
+          <label for="name">Your name *</label>
+          <input id="name" name="name" required placeholder="Full name">
+        </div>
 
-<div class="field">
-<label for="country">Country *</label>
-<input id="country" name="country" required placeholder="Your country">
-</div>
+        <div class="field">
+          <label for="companyName">Company</label>
+          <input id="companyName" name="company" placeholder="Company name">
+        </div>
 
-<div class="field">
-<label for="product">Product interest *</label>
-<select id="product" name="product" required>
-<option value="">Select a category</option>
-<option>Dining Furniture</option>
-<option>Bedroom & Storage</option>
-<option>Living & Occasional</option>
-<option>Custom / Project Furniture</option>
-<option>Multiple Categories</option>
-</select>
-</div>
+        <div class="field">
+          <label for="email">Business email *</label>
+          <input id="email" name="email" type="email" required placeholder="you@company.com">
+        </div>
 
-<div class="field">
-<label for="quantity">Estimated quantity</label>
-<select id="quantity" name="quantity">
-<option value="">Select quantity</option>
-<option>Sample / prototype</option>
-<option>1–25 pieces</option>
-<option>26–100 pieces</option>
-<option>101–500 pieces</option>
-<option>500+ pieces</option>
-<option>Not decided</option>
-</select>
-</div>
+        <div class="field">
+          <label for="country">Country *</label>
+          <input id="country" name="country" required placeholder="Your country">
+        </div>
 
-<div class="field full">
-<label for="message">Tell us about your requirements *</label>
-<textarea id="message" name="message" required placeholder="Product specifications, materials, finishes, target market, timeline or any other details"></textarea>
-</div>
+        <div class="field">
+          <label for="product">Product interest *</label>
+          <select id="product" name="product" required>
+            <option value="">Select a category</option>
+            <option>Dining Furniture</option>
+            <option>Bedroom & Storage</option>
+            <option>Living & Occasional</option>
+            <option>Office Furniture</option>
+            <option>Cabinets & Sideboards</option>
+            <option>Custom / Project Furniture</option>
+            <option>Multiple Categories</option>
+          </select>
+        </div>
 
-</div>
+        <div class="field">
+          <label for="quantity">Estimated quantity</label>
+          <select id="quantity" name="quantity">
+            <option value="">Select quantity</option>
+            <option>Sample / prototype</option>
+            <option>1–25 pieces</option>
+            <option>26–100 pieces</option>
+            <option>101–500 pieces</option>
+            <option>500+ pieces</option>
+            <option>Not decided</option>
+          </select>
+        </div>
 
-<p class="form-note">Your email application will open with your enquiry prepared for Suraj Furniture Exports. Please review and send the email to submit your enquiry.</p>
-<button class="btn" type="submit">Prepare Email Enquiry</button>
-<p id="formStatus" aria-live="polite" class="form-note"></p>
-</form>
+        <div class="field full">
+          <label for="message">Tell us about your requirements *</label>
+          <textarea id="message" name="message" required placeholder="Product specifications, materials, finishes, target market, timeline or any other details"></textarea>
+        </div>
 
-</div>
+      </div>
+
+      <p class="form-note">
+        Your email application will open with your enquiry prepared for
+        Suraj Furniture Exports. Please review and send the email to submit
+        your enquiry.
+      </p>
+
+      <button class="btn" type="submit">Prepare Email Enquiry</button>
+      <p id="formStatus" aria-live="polite" class="form-note"></p>
+    </form>
+
+  </div>
 </section>
 
 </main>
 
 <footer>
-<div class="wrap footer-row">
-<div>
-<div class="footer-brand">SURAJ FURNITURE EXPORTS</div>
-<div class="footer-muted">Furniture manufacturing · Wholesale · International supply</div>
-</div>
-<div class="footer-muted">© <span id="year"></span> Suraj Furniture Exports. All rights reserved.</div>
-</div>
+  <div class="wrap footer-row">
+    <div>
+      <div class="footer-brand">SURAJ FURNITURE EXPORTS</div>
+      <div class="footer-muted">Furniture manufacturing · Wholesale · International supply</div>
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="company.html">Our Company</a>
+      <a href="manufacturing.html">Manufacturing</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-muted">
+      © <span id="year"></span> Suraj Furniture Exports. All rights reserved.
+    </div>
+  </div>
 </footer>
 
 <script>
-const menu=document.getElementById('menu');
-const nav=document.getElementById('navlinks');
+const menu = document.getElementById('menu');
+const nav = document.getElementById('navlinks');
 
-menu.addEventListener('click',()=>nav.classList.toggle('open'));
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+menu.addEventListener('click', () => {
+  nav.classList.toggle('open');
+});
 
-document.querySelectorAll('[data-product]').forEach(a=>a.addEventListener('click',()=>{
-document.getElementById('product').value=a.dataset.product;
-}));
+nav.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => nav.classList.remove('open'));
+});
 
-document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('year').textContent = new Date().getFullYear();
 
-document.getElementById('quoteForm').addEventListener('submit',function(e){
-e.preventDefault();
+// Read a product category from a link such as contact.html?product=Dining%20Furniture
+const params = new URLSearchParams(window.location.search);
+const requestedProduct = params.get('product');
+if (requestedProduct) {
+  const productSelect = document.getElementById('product');
+  const matchingOption = Array.from(productSelect.options).find(
+    option => option.text.trim().toLowerCase() === requestedProduct.trim().toLowerCase()
+  );
+  if (matchingOption) productSelect.value = matchingOption.value;
+}
 
-const d=new FormData(this);
+// Prepare an email enquiry
+document.getElementById('quoteForm').addEventListener('submit', function(e) {
+  e.preventDefault();
 
-const subject=encodeURIComponent('Furniture quotation enquiry — Suraj Furniture Exports');
+  const d = new FormData(this);
 
-const body=encodeURIComponent(
-'Furniture quotation enquiry — Suraj Furniture Exports\n\nName: '+d.get('name')+
-'\nCompany: '+(d.get('company')||'Not provided')+
-'\nBusiness email: '+d.get('email')+
-'\nCountry: '+d.get('country')+
-'\nProduct interest: '+d.get('product')+
-'\nEstimated quantity: '+(d.get('quantity')||'Not provided')+
-'\n\nRequirements:\n'+d.get('message')
-);
+  const subject = encodeURIComponent(
+    'Furniture quotation enquiry — Suraj Furniture Exports'
+  );
 
-document.getElementById('formStatus').textContent='Opening your email application. Please review and send your enquiry.';
+  const body = encodeURIComponent(
+    'Furniture quotation enquiry — Suraj Furniture Exports\n\n' +
+    'Name: ' + d.get('name') +
+    '\nCompany: ' + (d.get('company') || 'Not provided') +
+    '\nBusiness email: ' + d.get('email') +
+    '\nCountry: ' + d.get('country') +
+    '\nProduct interest: ' + d.get('product') +
+    '\nEstimated quantity: ' + (d.get('quantity') || 'Not provided') +
+    '\n\nRequirements:\n' + d.get('message')
+  );
 
-window.location.href='mailto:anitanewborn12@gmail.com?subject='+subject+'&body='+body;
+  document.getElementById('formStatus').textContent =
+    'Opening your email application. Please review and send your enquiry.';
+
+  window.location.href =
+    'mailto:anitanewborn12@gmail.com?subject=' + subject + '&body=' + body;
 });
 </script>
 
