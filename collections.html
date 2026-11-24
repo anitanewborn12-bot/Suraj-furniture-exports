@@ -4,110 +4,910 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Furniture Collections | Suraj Furniture Exports</title>
-<meta name="description" content="Explore furniture collections by Suraj Furniture Exports, including dining, bedroom, living room and office furniture.">
+<meta name="description" content="Explore dining, living, bedroom, storage, office and custom furniture collections by Suraj Furniture Exports.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Italiana&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;color:#29251f;background:#faf9f6;line-height:1.7}
-header{background:#211b16;color:white;padding:22px 8%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
-header h2{font-family:Georgia,serif;letter-spacing:1px}
-nav{display:flex;gap:20px;flex-wrap:wrap}
-nav a{color:white;text-decoration:none;font-size:14px}
-nav a:hover{color:#d6ad72}
-.hero{text-align:center;padding:75px 20px;background:#eee8df}
-.hero p{color:#977448;letter-spacing:3px;font-size:12px;font-weight:bold}
-.hero h1{font-family:Georgia,serif;font-size:42px;font-weight:normal;margin-top:12px}
-.container{max-width:1150px;margin:auto;padding:55px 25px}
-.intro{text-align:center;max-width:750px;margin:0 auto 40px}
-.intro p{color:#625c54}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
-.item{background:white;padding:28px;border:1px solid #e9e2d9}
-.item h2{font-family:Georgia,serif;font-size:24px;font-weight:normal;margin-bottom:10px}
-.item p{color:#625c54;font-size:15px}
-.item span{color:#a27b4e;font-size:12px;letter-spacing:2px;font-weight:bold}
-.note{text-align:center;background:#272019;color:white;padding:50px 20px}
-.note h2{font-family:Georgia,serif;font-size:30px;font-weight:normal}
-.note p{color:#e2d8cb;max-width:700px;margin:15px auto}
-.note a{display:inline-block;margin-top:15px;color:#d6ad72;text-decoration:none}
-.footer{text-align:center;padding:25px;background:#17130f;color:#ddd;font-size:13px}
-.footer a{color:#d6ad72;text-decoration:none}
-@media(max-width:700px){
-header{justify-content:center;text-align:center}
-nav{justify-content:center;gap:12px}
-.hero h1{font-size:32px}
-.grid{grid-template-columns:1fr}
+:root{
+  --black:#171715;
+  --dark:#22211e;
+  --ivory:#f3efe7;
+  --cream:#e9e2d6;
+  --gold:#c5a477;
+  --muted:#aaa49a;
+  --white:#fffdf9;
+  --line:rgba(197,164,119,.28);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--black);
+  color:var(--ivory);
+  font-family:'DM Sans',sans-serif;
+  line-height:1.7;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.wrap{
+  width:min(1240px,88%);
+  margin:auto;
+}
+
+/* TOP BAR */
+
+.topbar{
+  background:#11110f;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  color:#aaa49a;
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.topbar-row{
+  min-height:37px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* NAVIGATION */
+
+header{
+  background:rgba(23,23,21,.97);
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:100;
+  backdrop-filter:blur(12px);
+}
+
+.nav{
+  min-height:88px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.brand{
+  font-family:'Italiana',serif;
+  font-size:25px;
+  letter-spacing:2px;
+  line-height:1.05;
+  white-space:nowrap;
+}
+
+.brand small{
+  display:block;
+  color:var(--gold);
+  font-family:'DM Sans',sans-serif;
+  font-size:9px;
+  letter-spacing:6px;
+  margin-top:7px;
+}
+
+.navlinks{
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+.navlinks a{
+  font-size:11px;
+  color:#d0cbc2;
+  letter-spacing:1px;
+  transition:.3s;
+}
+
+.navlinks a:hover,
+.navlinks a.active{
+  color:var(--gold);
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 23px;
+  border:1px solid var(--gold);
+  color:var(--black);
+  background:var(--gold);
+  font-size:10px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  transition:.3s;
+  cursor:pointer;
+}
+
+.btn:hover{
+  background:transparent;
+  color:var(--gold);
+}
+
+.menu{
+  display:none;
+  background:none;
+  border:1px solid var(--line);
+  color:var(--gold);
+  padding:9px 12px;
+  font-size:20px;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+  min-height:510px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(15,15,14,.94) 0%,rgba(15,15,14,.76) 48%,rgba(15,15,14,.18) 100%),
+    url('dining-furniture.jpg') center/cover no-repeat;
+}
+
+.hero-content{
+  width:min(1240px,88%);
+  margin:auto;
+  padding:100px 0;
+  position:relative;
+  z-index:2;
+}
+
+.eyebrow{
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  margin-bottom:22px;
+}
+
+.hero h1{
+  font-family:'Italiana',serif;
+  font-size:clamp(48px,7vw,88px);
+  line-height:1.03;
+  font-weight:400;
+  max-width:780px;
+  letter-spacing:-1px;
+}
+
+.hero h1 em{
+  color:var(--gold);
+  font-style:normal;
+}
+
+.hero p{
+  color:#d0cbc2;
+  max-width:560px;
+  font-size:14px;
+  margin-top:25px;
+  line-height:1.9;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:35px;
+}
+
+.btn-outline{
+  color:var(--ivory);
+  background:transparent;
+}
+
+.btn-outline:hover{
+  color:var(--black);
+  background:var(--gold);
+}
+
+/* INTRO */
+
+.intro{
+  padding:100px 0 65px;
+  text-align:center;
+}
+
+.intro .eyebrow{
+  margin-bottom:15px;
+}
+
+.intro h2{
+  font-family:'Italiana',serif;
+  font-size:clamp(36px,5vw,57px);
+  font-weight:400;
+  line-height:1.15;
+}
+
+.intro p{
+  color:var(--muted);
+  max-width:700px;
+  margin:20px auto 0;
+  font-size:13px;
+  line-height:2;
+}
+
+/* COLLECTION GRID */
+
+.collections{
+  padding:15px 0 110px;
+}
+
+.collection-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:32px;
+}
+
+.collection-card{
+  position:relative;
+  min-height:490px;
+  overflow:hidden;
+  background:var(--dark);
+  border:1px solid rgba(197,164,119,.16);
+}
+
+.collection-image{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .8s cubic-bezier(.2,.7,.2,1);
+}
+
+.collection-card:hover .collection-image{
+  transform:scale(1.06);
+}
+
+.collection-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    180deg,
+    rgba(0,0,0,.02) 15%,
+    rgba(0,0,0,.18) 42%,
+    rgba(0,0,0,.88) 100%
+  );
+  pointer-events:none;
+}
+
+.card-content{
+  position:absolute;
+  z-index:2;
+  left:38px;
+  right:38px;
+  bottom:35px;
+}
+
+.card-number{
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:3px;
+  margin-bottom:12px;
+}
+
+.card-content h2{
+  font-family:'Italiana',serif;
+  font-size:39px;
+  font-weight:400;
+  line-height:1.1;
+}
+
+.card-content p{
+  max-width:450px;
+  color:#e1ddd5;
+  font-size:12px;
+  margin-top:13px;
+  line-height:1.9;
+}
+
+.card-link{
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-top:22px;
+  padding-bottom:7px;
+  border-bottom:1px solid var(--gold);
+  transition:.3s;
+}
+
+.card-link:hover{
+  gap:22px;
+  color:white;
+}
+
+/* FEATURE STRIP */
+
+.feature-strip{
+  background:var(--ivory);
+  color:var(--black);
+  padding:90px 0;
+}
+
+.feature-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.feature-label{
+  color:#9c784d;
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:16px;
+}
+
+.feature-inner h2{
+  font-family:'Italiana',serif;
+  font-size:clamp(38px,5vw,58px);
+  line-height:1.1;
+  font-weight:400;
+}
+
+.feature-inner p{
+  color:#69645d;
+  font-size:13px;
+  line-height:2;
+  margin-top:20px;
+}
+
+.feature-points{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.feature-point{
+  border-top:1px solid #c9bda9;
+  padding-top:17px;
+}
+
+.feature-point strong{
+  display:block;
+  font-family:'Italiana',serif;
+  font-size:24px;
+  font-weight:400;
+  margin-bottom:5px;
+}
+
+.feature-point span{
+  color:#777067;
+  font-size:11px;
+  line-height:1.7;
+}
+
+/* CUSTOM ENQUIRY */
+
+.enquiry{
+  padding:105px 20px;
+  text-align:center;
+  background:
+    linear-gradient(rgba(15,15,14,.87),rgba(15,15,14,.92)),
+    url('custom-furniture.jpg') center/cover no-repeat;
+}
+
+.enquiry .eyebrow{
+  margin-bottom:17px;
+}
+
+.enquiry h2{
+  font-family:'Italiana',serif;
+  font-size:clamp(38px,5vw,60px);
+  line-height:1.1;
+  font-weight:400;
+}
+
+.enquiry p{
+  max-width:700px;
+  margin:20px auto 30px;
+  color:#c6c0b6;
+  font-size:13px;
+  line-height:2;
+}
+
+/* FOOTER */
+
+footer{
+  background:#10100f;
+  border-top:1px solid var(--line);
+  padding:35px 0;
+}
+
+.footer-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.footer-brand{
+  font-family:'Italiana',serif;
+  font-size:20px;
+  letter-spacing:2px;
+}
+
+.footer-muted{
+  color:#88847c;
+  font-size:10px;
+  letter-spacing:.5px;
+}
+
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.footer-links a{
+  color:#c5bfb4;
+  font-size:11px;
+}
+
+.footer-links a:hover{
+  color:var(--gold);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+  .navlinks{gap:14px}
+  .navlinks a{font-size:10px}
+  .nav>.btn{display:none}
+}
+
+@media(max-width:760px){
+  .topbar-row{
+    justify-content:center;
+    text-align:center;
+    padding:8px 0;
+  }
+
+  .topbar-row span:last-child{
+    display:none;
+  }
+
+  .nav{
+    min-height:75px;
+    flex-wrap:wrap;
+  }
+
+  .brand{
+    font-size:22px;
+  }
+
+  .menu{
+    display:block;
+  }
+
+  .navlinks{
+    display:none;
+    width:100%;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:0;
+    padding:5px 0 18px;
+  }
+
+  .navlinks.open{
+    display:flex;
+  }
+
+  .navlinks a{
+    width:100%;
+    padding:12px 0;
+    border-top:1px solid rgba(255,255,255,.07);
+    font-size:12px;
+  }
+
+  .hero{
+    min-height:500px;
+    background-position:60% center;
+  }
+
+  .hero-content{
+    padding:80px 0;
+  }
+
+  .hero h1{
+    font-size:53px;
+  }
+
+  .intro{
+    padding:75px 0 45px;
+  }
+
+  .collection-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  .collection-card{
+    min-height:430px;
+  }
+
+  .card-content{
+    left:25px;
+    right:25px;
+    bottom:25px;
+  }
+
+  .card-content h2{
+    font-size:34px;
+  }
+
+  .feature-inner{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .feature-strip{
+    padding:70px 0;
+  }
+
+  .enquiry{
+    padding:80px 20px;
+  }
+
+  .footer-row{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
+
+@media(max-width:420px){
+  .hero h1{font-size:45px}
+  .hero p{font-size:12px}
+  .collection-card{min-height:390px}
+  .feature-points{gap:18px}
 }
 </style>
 </head>
 
 <body>
+
+<div class="topbar">
+  <div class="wrap topbar-row">
+    <span>Suraj Furniture Exports · India</span>
+    <span>Wholesale · Custom Furniture · International Supply</span>
+  </div>
+</div>
+
 <header>
-<h2>SURAJ FURNITURE EXPORTS</h2>
-<nav>
-<a href="index.html">Home</a>
-<a href="collections.html">Collections</a>
-<a href="company.html">Our Company</a>
-<a href="manufacturing.html">Manufacturing</a>
-<a href="director.html">Leadership</a>
-<a href="contact.html">Contact</a>
-</nav>
+  <div class="wrap nav">
+
+    <a class="brand" href="index.html">
+      SURAJ FURNITURE
+      <small>EXPORTS</small>
+    </a>
+
+    <nav class="navlinks" id="navlinks">
+      <a href="index.html">Home</a>
+      <a href="collections.html" class="active">Collections</a>
+      <a href="company.html">Our Company</a>
+      <a href="manufacturing.html">Manufacturing</a>
+      <a href="director.html">Leadership</a>
+      <a href="anita-chauhan.html">Anita Chauhan</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <a class="btn" href="index.html#contact">Request a Quote</a>
+
+    <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  </div>
 </header>
 
+<main>
+
+<!-- HERO -->
+
 <section class="hero">
-<p>OUR FURNITURE COLLECTIONS</p>
-<h1>Designed for Living</h1>
+  <div class="hero-content">
+    <div class="eyebrow">The Art of Thoughtful Interiors</div>
+
+    <h1>
+      Collections<br>
+      Made for <em>Living</em>
+    </h1>
+
+    <p>
+      Discover furniture for thoughtfully designed homes and commercial spaces
+      From dining and living to bedroom and bespoke project furniture
+      each collection reflects our approach to design and practical craftsmanship
+    </p>
+
+    <div class="hero-actions">
+      <a href="#collections" class="btn">Explore Collections</a>
+      <a href="index.html#contact" class="btn btn-outline">Discuss Your Project</a>
+    </div>
+  </div>
 </section>
 
-<main class="container">
-<div class="intro">
-<h2>Furniture for Every Space</h2>
-<p>Explore our range of furniture for residential and commercial spaces. We focus on thoughtful designs, quality materials and reliable craftsmanship.</p>
-</div>
+<!-- INTRO -->
 
-<div class="grid">
-<div class="item">
-<span>01 / DINING</span>
-<img src="dining-furniture.jpg" alt="Dining Furniture" style="width:100%; height:280px; object-fit:cover; border-radius:12px;"><p>Dining tables and chairs designed for homes, restaurants and hospitality spaces.</p>
-</div>
+<section class="intro wrap">
+  <div class="eyebrow">Suraj Furniture Exports</div>
 
-<div class="item">
-<span>02 / LIVING</span>
-<img src="Living%20Room%20Furniture" alt="Living Room Furniture Collection" style="width:100%; height:280px; object-fit:cover; border-radius:12px;"><p>Sofas, coffee tables, consoles and sideboards for welcoming living spaces.</p>
-</div>
+  <h2>Furniture for Considered Spaces</h2>
 
-<div class="item">
-<span>03 / BEDROOM</span>
-<img src="bedroom-furniture.jpg" alt="Bedroom Furniture" style="width:100%; height:280px; object-fit:cover; border-radius:12px;"><p>Beds, bedside tables and cabinets made for comfort and practical use.</p>
-</div>
+  <p>
+    Explore our range of furniture for residential and commercial environments
+    We work with wholesale buyers designers retailers and project partners
+    to understand their requirements and develop suitable furniture solutions
+  </p>
+</section>
 
-<div class="item">
-<span>04 / STORAGE</span>
-<img src="cabinets-storage.jpg" alt="Cabinets and Storage" style="width:100%; height:280px; object-fit:cover; border-radius:12px;"><p>Functional cabinets and storage furniture for organised interiors.</p>
-</div>
+<!-- COLLECTIONS -->
 
-<div class="item">
-<span>05 / OFFICE</span>
-<img src="office-furniture.jpg" alt="Office Furniture" style="width:100%; height:280px; object-fit:cover; border-radius:12px;"><p>Furniture solutions for offices, workspaces and professional environments.</p>
-</div>
+<section class="collections" id="collections">
+  <div class="wrap">
 
-<div class="item">
-<span>06 / CUSTOM</span>
-<img src="custom-furniture.jpg" alt="Custom Furniture" style="width:100%; height:280px; object-fit:cover; border-radius:12px;"><p>Made-to-order furniture developed according to client requirements and project needs.</p>
-</div>
-</div>
+    <div class="collection-grid">
+
+      <article class="collection-card">
+        <img class="collection-image"
+             src="dining-furniture.jpg"
+             alt="Dining furniture collection"
+             loading="lazy">
+
+        <div class="card-content">
+          <div class="card-number">01 / DINING</div>
+          <h2>Dining Furniture</h2>
+          <p>
+            Dining tables and chairs designed for homes restaurants
+            hospitality spaces and considered dining environments
+          </p>
+          <a class="card-link" href="index.html#contact" data-product="Dining Furniture">
+            Enquire about dining <span>↗</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="collection-card">
+        <img class="collection-image"
+             src="living-room-furniture.jpg"
+             alt="Living room furniture collection"
+             loading="lazy">
+
+        <div class="card-content">
+          <div class="card-number">02 / LIVING</div>
+          <h2>Living & Occasional</h2>
+          <p>
+            Sofas coffee tables consoles and sideboards for welcoming
+            living spaces and contemporary interiors
+          </p>
+          <a class="card-link" href="index.html#contact" data-product="Living & Occasional">
+            Enquire about living <span>↗</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="collection-card">
+        <img class="collection-image"
+             src="bedroom-furniture.jpg"
+             alt="Bedroom furniture collection"
+             loading="lazy">
+
+        <div class="card-content">
+          <div class="card-number">03 / BEDROOM</div>
+          <h2>Bedroom Furniture</h2>
+          <p>
+            Beds bedside tables and bedroom furniture designed
+            around comfort functionality and everyday living
+          </p>
+          <a class="card-link" href="index.html#contact" data-product="Bedroom & Storage">
+            Enquire about bedroom <span>↗</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="collection-card">
+        <img class="collection-image"
+             src="cabinets-storage.jpg"
+             alt="Cabinets and storage furniture collection"
+             loading="lazy">
+
+        <div class="card-content">
+          <div class="card-number">04 / STORAGE</div>
+          <h2>Cabinets & Storage</h2>
+          <p>
+            Functional cabinets and storage furniture for organised
+            interiors with a thoughtful balance of form and utility
+          </p>
+          <a class="card-link" href="index.html#contact" data-product="Cabinets & Sideboards">
+            Enquire about storage <span>↗</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="collection-card">
+        <img class="collection-image"
+             src="office-furniture.jpg"
+             alt="Office furniture collection"
+             loading="lazy">
+
+        <div class="card-content">
+          <div class="card-number">05 / WORKSPACE</div>
+          <h2>Office Furniture</h2>
+          <p>
+            Furniture solutions for offices workspaces and
+            professional environments with practical requirements
+          </p>
+          <a class="card-link" href="index.html#contact" data-product="Office Furniture">
+            Enquire about office <span>↗</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="collection-card">
+        <img class="collection-image"
+             src="custom-furniture.jpg"
+             alt="Custom furniture collection"
+             loading="lazy">
+
+        <div class="card-content">
+          <div class="card-number">06 / BESPOKE</div>
+          <h2>Custom Furniture</h2>
+          <p>
+            Made-to-order furniture developed around client specifications
+            project requirements and intended use
+          </p>
+          <a class="card-link" href="index.html#contact" data-product="Custom / Project Furniture">
+            Discuss custom work <span>↗</span>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- OUR APPROACH -->
+
+<section class="feature-strip">
+  <div class="wrap feature-inner">
+
+    <div>
+      <div class="feature-label">Beyond the collection</div>
+
+      <h2>Designed Around Your Requirements</h2>
+
+      <p>
+        Every project has its own purpose and specifications
+        Whether you are sourcing for retail hospitality or a commercial
+        environment we welcome discussions around product selection
+        materials finishes and quantities
+      </p>
+
+      <a class="btn" href="index.html#contact" style="margin-top:27px">
+        Start a Conversation
+      </a>
+    </div>
+
+    <div class="feature-points">
+
+      <div class="feature-point">
+        <strong>01</strong>
+        <span>Residential furniture collections</span>
+      </div>
+
+      <div class="feature-point">
+        <strong>02</strong>
+        <span>Commercial and workspace requirements</span>
+      </div>
+
+      <div class="feature-point">
+        <strong>03</strong>
+        <span>Custom and made-to-order furniture</span>
+      </div>
+
+      <div class="feature-point">
+        <strong>04</strong>
+        <span>Wholesale and international enquiries</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ENQUIRY -->
+
+<section class="enquiry">
+  <div class="eyebrow">Let's Create Something Meaningful</div>
+
+  <h2>Have a Project in Mind?</h2>
+
+  <p>
+    We welcome wholesale enquiries commercial requirements
+    and custom furniture discussions from domestic and international buyers
+    Share your requirements with our team
+  </p>
+
+  <a href="index.html#contact" class="btn">Request a Quotation</a>
+</section>
+
 </main>
 
-<section class="note">
-<h2>Looking for Furniture for Your Project?</h2>
-<p>We welcome wholesale enquiries, commercial requirements and custom furniture orders from domestic and international buyers.</p>
-<a href="contact.html">Contact Our Team →</a>
-</section>
+<!-- FOOTER -->
 
-<footer class="footer">
-<p>© 2026 Suraj Furniture Exports. All Rights Reserved.</p>
-<a href="index.html">Back to Home</a>
+<footer>
+  <div class="wrap footer-row">
+
+    <div>
+      <div class="footer-brand">SURAJ FURNITURE EXPORTS</div>
+      <div class="footer-muted">
+        Furniture Manufacturing · Wholesale · International Supply
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="company.html">Our Company</a>
+      <a href="manufacturing.html">Manufacturing</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+
+    <div class="footer-muted">
+      © <span id="year"></span> Suraj Furniture Exports. All Rights Reserved.
+    </div>
+
+  </div>
 </footer>
+
+<script>
+const menu = document.getElementById('menu');
+const nav = document.getElementById('navlinks');
+
+menu.addEventListener('click', () => {
+  nav.classList.toggle('open');
+});
+
+nav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+  });
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* Pass selected furniture category to homepage enquiry form */
+document.querySelectorAll('[data-product]').forEach(link => {
+  link.addEventListener('click', () => {
+    const product = link.dataset.product;
+    const target = 'index.html?product=' + encodeURIComponent(product) + '#contact';
+    link.href = target;
+  });
+});
+</script>
+
 </body>
 </html>
-
